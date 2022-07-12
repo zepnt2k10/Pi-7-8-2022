@@ -62,6 +62,10 @@
 	\endgroup
 }
 
+\tikzset{
+	squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=3mm}
+}
+
 \begin{document}
 %	 \thispagestyle{empty}
 %	 \begingroup 
@@ -72,10 +76,10 @@
 %	 \newpage	 
 %	 \pagestyle{empty}
 
-	\setcounter{page}{2}
-	\setcounter{figure}{0}
-	\input{../toanhocdoisong/toanhocdoisong}
-	\newpage
+%	\setcounter{page}{2}
+%	\setcounter{figure}{0}
+%	\input{../toanhocdoisong/toanhocdoisong}
+%	\newpage
 	
 %	\setcounter{figure}{0}
 %	\input{../duongvaotoanhoc/duongvaotoanhoc} 
@@ -97,13 +101,17 @@
 %	 \input{../hoccungpi/hoccungpi}
 %	 \newpage
 %
+	 \setcounter{figure}{0}
+	 \input{../cackithi/cackithi}
+	 \newpage
+
 %	 \setcounter{figure}{0}
-%	 \input{../cackithi/cackithi}
+%	 \input{../diendantoanhoc/diendantoanhoc}
 %	 \newpage
 %
 %	 \setcounter{figure}{0}
 %	 \input{../gocco/gocco}
-%	 \newpage
+%	 \newpages
 %	 
 %	 \thispagestyle{empty}
 %	 \begingroup 
@@ -131,9 +139,7 @@
 %	\input{../doisongtoanhoc/doisongtoanhoc}
 %	\newpage
 
-%	 \setcounter{figure}{0}
-%	 \input{../diendantoanhoc/diendantoanhoc}
-%	 \newpage
+
 %
 %	 \setcounter{figure}{0}
 %	 \input{../timhieukhoahoc/timhieukhoahoc}
