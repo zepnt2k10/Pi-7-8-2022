@@ -2,7 +2,7 @@
 \input{../data/moreOfTuan}
 \graphicspath{{../main/pic/}}
 \everymath{\displaystyle}
-
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
 \usepackage{ebgaramond}
 \usepackage{xpatch}
 \PassOptionsToPackage{hyphens}{url}
@@ -70,6 +70,10 @@
 	sqnode/.style={rectangle, draw=cackithi, very thick, minimum size=3mm}
 }
 
+\tikzset{
+	roundnode/.style={circle, draw=toancuabi, fill=cackithi!50, minimum size=3mm},
+}
+
 
 \begin{document}
 %	 \thispagestyle{empty}
@@ -94,13 +98,13 @@
 %	 \input{../quantoan/quantoan}
 %	 \newpage
 %
-	 \setcounter{figure}{0}
-	 \input{../toancuabi/toancuabi}
-	 \newpage
-%
 %	 \setcounter{figure}{0}
-%	 \input{../thachthuctoanhoc/thachthuc2}
-%	 \newpage 
+%	 \input{../toancuabi/toancuabi}
+%	 \newpage
+%
+	 \setcounter{figure}{0}
+	 \input{../thachthuctoanhoc/thachthuc2}
+	 \newpage 
 %
 %	 \setcounter{figure}{0}
 %	 \input{../hoccungpi/hoccungpi}
@@ -111,12 +115,24 @@
 %	 \newpage
 
 %	 \setcounter{figure}{0}
+%	 \input{../lichsutoanhoc/lichsutoanhoc}
+%	 \newpage
+
+%	 \setcounter{figure}{0}
 %	 \input{../diendantoanhoc/diendantoanhoc}
 %	 \newpage
+
+%	 \setcounter{figure}{0}
+%	 \input{../timhieukhoahoc/timhieukhoahoc}
+%	 \newpage
+
+%	\setcounter{figure}{0}
+%	\input{../doisongtoanhoc/doisongtoanhoc}
+%	\newpage
 %
 %	 \setcounter{figure}{0}
-%	 \input{../gocco/gocco}
-%	 \newpages
+%	 \input{../gocco/gocco4}
+%	 \newpage
 %	 
 %	 \thispagestyle{empty}
 %	 \begingroup 
@@ -140,13 +156,7 @@
 %	\input{../doithoaitoanhoc/doithoaitoanhoc}
 %	\newpage
 
-%	\setcounter{figure}{0}
-%	\input{../doisongtoanhoc/doisongtoanhoc}
-%	\newpage
 
 
-%
-%	 \setcounter{figure}{0}
-%	 \input{../timhieukhoahoc/timhieukhoahoc}
-%	 \newpage
+
 %

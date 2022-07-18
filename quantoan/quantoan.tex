@@ -2,346 +2,167 @@
 \pagestyle{quantoan}
 \everymath{\color{quantoan}}
 \graphicspath{{../quantoan/pic/}}
-\blfootnote{\color{quantoan}\color{quantoan}$^1$The Bizarre World of Nontransitive Dice: Games for Two or More Players. The College Mathematics Journal, Vol. $48$, No. $1$ (January $2017$), pp. 2 $- 9$.}
+\blfootnote{\color{quantoan}\color{quantoan}$^*$Nguồn Math. Intellegencer, Số $41$.}
 \begingroup
 \AddToShipoutPicture*{\put(0,616){\includegraphics[width=19.3cm]{../bannerquantoan}}}
-\AddToShipoutPicture*{\put(82,507){\includegraphics[scale=1]{../tieude2.pdf}}}
+\AddToShipoutPicture*{\put(58,505){\includegraphics[scale=1]{../tieude.pdf}}}
 \centering
 \endgroup
 
-\vspace*{202pt}
+\vspace*{198pt}
 
 \begin{multicols}{2}
-	\textit{Với những con xúc xắc không bắc cầu, bạn luôn có thể chọn một con xúc xắc có xác suất thắng lớn hơn con xúc xắc của đối thủ. Một số bộ ba và bộ bốn con xúc xắc không bắc cầu đã được biết đến rộng rãi. Trong bài viết này, chúng ta tìm cách tạo ra một bộ xúc xắc không bắc cầu cho phép thắng hai đối thủ cùng một lúc. Đã có một trò chơi ba người như vậy được thiết kế, với bảy con xúc xắc. Bằng cách khai thác tính đổi chiều của một số con xúc xắc, chúng tôi đưa ra một trò chơi ba người cải tiến với \linebreak năm con xúc xắc.}
-	\vskip 0.05cm
-	Bạn có thể rủ một người bạn chơi trò chơi sau đây. Đó là một trò chơi hai người, sử dụng ba con xúc xắc. Tuy nhiên, đây không phải là những con xúc xắc thông thường, bởi các giá trị trên mặt của chúng không phải là các số từ $1$ đến $6$.
-	\vskip 0.05cm
-	Trò chơi rất đơn giản: Mỗi người chọn và lăn một con xúc xắc, ai được nhiều điểm hơn thì~thắng.
-	\vskip 0.05cm
-	Trò chơi có vẻ khá cân bằng. Thế nhưng, trong một trò chơi, chẳng hạn, mười lượt, bạn luôn có thể chọn được một con xúc xắc có xác suất thắng lớn hơn, bất kể người bạn của bạn chọn con xúc xắc nào. Và bạn có thể tự làm những con xúc xắc này ở nhà.
-	\vskip 0.05cm
-	Trong hình dưới đây\footnote[2]{\color{quantoan}Chúng tôi giữ nguyên các tên màu bằng tiếng Anh trong hình vẽ, vì lý do sẽ được làm rõ ở phần sau của bài viết.} là một bộ ba con xúc xắc đặc biệt như thế:
+	Ai cũng biết rằng Charles Lutwidge Dodgson (bút danh Lewis Carroll, $1832-1898$; Hình $1$), tác giả của \textit{Alice ở xứ xở diệu kỳ}, là một nhà toán học. Dodgson là một giảng viên toán tại trường Christ Church thuộc Đại học Oxford và đã có nhiều công trình toán học về hình học, đại số, logic và lý thuyết bỏ phiếu. Hầu hết mọi đánh giá về toán học của Dodgson đều nhắc đến một câu chuyện thú vị (sau đây gọi là \textit{câu chuyện}) liên quan đến nữ hoàng Victoria. Nữ hoàng được cho là rất thích truyện \textit{Alice}, xuất bản năm $1865$, và đã yêu cầu tác phẩm tiếp theo của tác giả. Với sự ngạc nhiên và thất vọng, bà đã nhận được cuốn \textit{Chuyên luận về định thức} của Dodgson, xuất bản năm $1867$. Câu chuyện này là một giai thoại kinh điển mà người ta thường bắt gặp trong các tác phẩm về toán học.
+	\vskip 0.02cm
+	Những bài viết về \textit{câu chuyện} cũng đôi khi nhắc nhở chúng ta rằng chính Dodgson đã phủ nhận nó vào năm $1896$, nhưng sự lan rộng của tin đồn dường như không thể ngăn được. Có thể dễ dàng hiểu được sức hấp dẫn của nó, vì nó thể hiện một cách hoàn hảo quan niệm rộng rãi về Dodgson nói riêng và toán học nói chung. Đầu tiên, câu chuyện truyền tải một cái nhìn rộng rãi về Dodgson như một nhân vật kép: một mặt là nhà toán học buồn tẻ và mặt khác là một tiểu thuyết gia giàu trí tưởng tượng. Thứ hai, phản ứng được cho là của nữ hoàng tiêu biểu cho niềm tin rằng toán học và văn học bắt nguồn từ những bộ óc và nền văn hóa khác nhau. Điều thú vị là nhiều lời kể về \textit{câu chuyện} nói rằng nữ hoàng không hài lòng khi nhận được cuốn sách. Người ta cũng nói rằng Dodgson, người rất tôn kính hoàng gia, không thể nào thực hiện một ``hành động hoàn toàn ngược với tính cách" như vậy (Beale $1973$). Nhưng  tặng một cuốn sách toán cho nữ hoàng thì có gì sai?  
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 0.8\linewidth]{1}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-15pt}
+		\includegraphics[width= 1\linewidth]{1}
+		\caption{\small\textit{\color{quantoan}Hình $1$. Charles L. Dodgson (from the Wakeling
+				Collection).}}
+		\vspace*{-5pt}
 	\end{figure}
-	Ta nói con xúc xắc $A$ thắng con xúc xắc $B$ nếu xác suất để $A$ thắng $B$ lớn hơn $50\%$. Có thể dễ dàng chứng minh con xúc xắc Đỏ thắng con xúc xắc Xanh da trời bằng lược đồ cây dưới đây:
-	\begin{figure}[H]
-		\vspace*{-15pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =1]{2}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-15pt}
-	\end{figure}
-	Từ lược đồ cây, ta thấy Đỏ thắng Xanh da trời với xác suất $7/12$, vì vậy Đỏ là lựa chọn tốt hơn trong trường hợp này.
-	\vskip 0.05cm
-	Tương tự, ta có thể tính được xác suất để Xanh da trời thắng Xanh lá cây là $7/12$, từ đó thiết lập được một chuỗi quan hệ thắng bại trong đó Đỏ thắng Xanh da trời, Xanh da trời thắng Xanh lá cây.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =0.9]{3}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-15pt}
-	\end{figure}
-	Từ thông tin này, sẽ là hoàn toàn hợp lý khi kỳ vọng rằng Đỏ thắng Xanh lá cây. Nếu quả đúng như vậy, ta nói rằng các con xúc xắc này có tính bắc cầu.
-	\vskip 0.05cm
-	Thế nhưng điều đó lại không đúng. Kỳ quái làm sao, sự thực là Xanh lá cây lại thắng Đỏ với xác suất $25/36$. Nghĩa là chuỗi quan hệ thắng bại là một vòng tròn, giống như trò oẳn tù tì.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =0.9]{4}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-15pt}
-	\end{figure}
-	Đây chính là mẹo của trò chơi, bởi miễn là bạn nhường đối thủ chọn trước, bạn sẽ luôn chọn được một con xúc xắc có xác suất thắng lớn hơn.
-	\vskip 0.05cm
-	\textbf{\color{quantoan}Thiệt đơn thiệt kép}
-	\vskip 0.05cm
-	Sau vài ván thua, đối thủ bắt đầu nghi ngờ, nhưng mọi chuyện vẫn chưa kết thúc. Sau khi giải thích chuỗi thắng bại vòng tròn của ba con xúc xắc, hãy thách bạn của bạn chơi một trò mới.
-	\vskip 0.05cm
-	Lần này, bạn chọn trước, và đối thủ sẽ có thể chọn một con xúc xắc có xác suất thắng lớn hơn. Nhưng cả số tiền cược lẫn số lần gieo đều tăng: mỗi người gieo con xúc xắc của mình hai lần, ai được tổng điểm lớn hơn thì thắng.
-	\vskip 0.05cm
-	Có lẽ với hai con xúc xắc thì đối thủ có xác suất thắng cũng gấp đôi? Nhưng không, thật kỳ diệu, với hai con xúc xắc, chuỗi thắng bại lại đảo chiều!
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =0.7]{5}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-15pt}
-	\end{figure}
-	Nói cách khác, vòng tròn thắng trở thành vòng tròn bại, nhờ đó bạn tiếp tục thắng trong trò chơi mới!
-	\vskip 0.05cm
-	\textbf{\color{quantoan}Bộ xúc xắc Efron}
-	\vskip 0.05cm
-	Bản chất nghịch lý của những con xúc xắc không bắc cầu được phát hiện vào năm $1959$, bởi hai nhà toán học Ba Lan Hugo Steinhaus và Stanislaw Trybuła [$3$].
-	\vskip 0.05cm
-	Tuy nhiên, tính chất đảo chiều đặc biệt không đúng cho mọi bộ xúc xắc không bắc cầu. Thí dụ, trong hình dưới đây là một bộ bốn con xúc xắc không bắc cầu được Martin Gardner giới thiệu vào năm $1970$ [$1$]. Chúng được tìm ra bởi nhà thống kê học người Mỹ Brad Efron.
+	\textbf{\color{quantoan}Câu chuyện lan truyền chóng mặt}
+	\vskip 0.1cm
+	Khi \textit{Alice ở xứ xở diệu kỳ} ra mắt (Dodgson $1865$, Hình $2$), Dodgson là một tác giả vô danh. Ông mới chỉ xuất bản một số tập sách nhỏ về toán học và các tác phẩm nhỏ. Đặc biệt, vào năm $1856$, ông đã đóng góp một số bài thơ cho tạp chí \textit{Chuyến tàu}, ở đó ông sử dụng bút danh Lewis Carroll, lấy từ tên của mình (Lewis từ Lutwidge và Carroll từ Charles). Những năm sau đó, ông chủ yếu sử dụng tên thật cho các công trình toán học và bút danh cho các tác phẩm văn học để giữ kín danh tính của mình. Thành công tức thì của cuốn sách \textit{Alice} đã làm cho bút danh văn học của ông được đông đảo công chúng biết đến, nhưng họ không biết được ông có thể là ai.
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{6}
-		\caption{\small\textit{\color{quantoan}Bộ xúc xắc Efron.}}
+		\includegraphics[width= 1\linewidth]{2}
+		\caption{\small\textit{\color{quantoan}Hình $2$. The title page of Dodgson’s Alice’s Adventures in Wonderland, $1865$ (Photo by George Bayntun, Collection of Charlie Lovett).}}
 		\vspace*{-10pt}
 	\end{figure}
-	Ở đây, các con xúc xắc tạo thành một vòng tròn: Xanh da trời thắng Tím, Tím thắng Xanh lá cây, Xanh lá cây thắng Đỏ, và Đỏ thắng Xanh da trời, tất cả cùng với xác suất $2/3$.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =0.8]{7}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-10pt}
-	\end{figure}
-	Trong [$5$], Trybuła cũng chứng minh rằng luôn có thể tạo được một bộ xúc xắc không bắc cầu gồm $m$ con xúc xắc $n$ mặt, đồng thời chặn xác suất thắng nhỏ nhất của các con xúc xắc. Các xác suất thắng có thể đồng thời lớn hơn hoặc bằng, nhưng không thể đồng thời lớn hơn hẳn chặn này\footnote[3]{\color{quantoan}Nói cách khác, cận trên đúng của xác suất thắng nhỏ nhất -- ND.}.
-	\vskip 0.05cm
-	Trong trường hợp xúc xắc sáu mặt, bộ ba con xúc xắc đầu tiên đạt được chặn này. Với số mặt bất kỳ, giá trị chặn lớn nhất cho ba con xúc xắc là tỷ lệ vàng $\varphi = 0{,}618\dots$. Giá trị này tăng theo số con xúc xắc và hội tụ tới $3/4$.
-	\vskip 0.05cm
-	Bộ xúc xắc Efron đạt được giá trị chặn $2/3$ cho bốn con xúc xắc. Nhưng không may, chúng không có tính chất đảo chiều khi gấp đôi số lần gieo. Một số quan hệ thắng bại đổi chiều, số khác thì không.
-	\vskip 0.05cm
-	Nghe đồn rằng tỷ phú Mỹ Warren Buffet rất thích những con xúc xắc không bắc cầu. Khi ông thách người bạn Bill Gates chơi một trò chơi với bộ xúc xắc Efron, Bill Gates đã nghi hoặc và đòi Warren Buffet chọn trước. Có lẽ nếu Warren Buffet dùng một bộ xúc xắc có tính chất đảo chiều, ông đã có thể thắng Bill Gates -- ông chỉ cần tuyên bố gieo một lần hay gieo hai lần sau khi cả hai đã chọn xong xúc xắc.
-	\vskip 0.05cm
-	\textbf{\color{quantoan}Trò chơi ba người}
-	\vskip 0.05cm
-	Tôi muốn biết liệu có thể mở rộng ý tưởng xúc xắc không bắc cầu để tạo ra một trò chơi ba người hay không, nghĩa là có hay không một bộ xúc xắc sao cho sau khi hai người bạn mỗi người đã chọn một con xúc xắc, bạn có thể chọn một con xúc xắc thắng cả hai con xúc xắc của họ!
-	\vskip 0.05cm
-	Hóa ra là có thể. M. Oskar van Deventer, nhà thiết kế trò chơi người Hà Lan, đã tìm ra một bộ bảy con xúc xắc với các giá trị từ $1$ đến $21$. Trong bộ xúc xắc này, hai đối thủ có thể chọn mỗi người một con xúc xắc bất kỳ, và luôn có một con xúc xắc thứ ba thắng được cả hai. Các xác suất thắng đối xứng một cách đẹp đẽ: mỗi mũi tên trong sơ đồ dưới đây đều biểu diễn một xác suất thắng bằng $5/9$.
-	\vskip 0.05cm
-	Điều này có nghĩa là bạn có thể đồng thời đấu với hai người. Tuy nhiên, vẫn không dễ thắng được cả hai cùng một lúc. Xác suất để thắng được cả hai cùng một lúc chỉ khoảng $39\%$.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =0.6]{8}
-		\caption{\small\textit{\color{quantoan}Bộ xúc xắc Oskar.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Bộ bảy con xúc xắc này tạo thành một đồ thị có hướng đầy đủ. Một cách tương tự, trò chơi bốn người sẽ cần $19$ con xúc xắc. Chúng ta chưa biết liệu có tồn tại một bộ xúc xắc như vậy hay không.
-	\vskip 0.05cm
-	Tuy nhiên, tôi bắt đầu suy nghĩ xem liệu có thể tận dụng tính chất đảo chiều của một số con xúc xắc không bắc cầu để thiết kế một trò chơi ba người hơi khác đi một chút, với ít hơn bảy con xúc xắc.
+	Cuốn sách cũng được hưởng một nỗ lực quảng bá lớn của cả nhà xuất bản và tác giả. Vô số các bản sao đã được gửi đến các tạp chí để đánh giá, hoặc tặng bạn bè làm quà. Cháu trai, đồng thời là người viết tiểu sử đầu tiên của Dodgson, Stuart D. Collingwood, đã thuật lại rằng bản sao đầu tiên của cuốn sách được gửi đến Alice ngoài đời thực, người đã truyền cảm hứng cho câu chuyện, còn bản thứ hai được gửi đến công chúa Beatrice, con gái út của nữ hoàng Victoria (Collingwood $1898$, tr.$104$) . Đáp lại, Dodgson nhận được một lá thư cho biết ``cuốn sách nhỏ mà Bệ hạ rất hài lòng khi cho phép đọc nó cho công chúa Beatrice" (Wakeling $1999$, tr. $122$).
 	\vskip 0.1cm
-	\textbf{\color{quantoan}Bộ xúc xắc Grime}
+	Với sự khen ngợi của giới phê bình và số lượng lớn sách bán được, ý tưởng về phần tiếp theo hẳn đã nhanh chóng nảy ra với Dodgson và nhà xuất bản của ông. Ngay từ năm $1866$, Dodgson đã đề cập đến việc ``đang cân nhắc ý tưởng về việc viết một thứ kiểu như phần tiếp theo". Công chúng rõ ràng đã mơ màng về những cuộc phiêu lưu khác, và có tin đồn rằng ``Lewis Carroll đang viết tiếp" (Collingwood $1898$, tr.$129$).
 	\vskip 0.1cm
-	Ý tưởng về trò chơi ba người của tôi sử dụng năm con xúc xắc với hai chuỗi thắng bại vòng tròn. Khi gấp đôi số lần gieo, một chuỗi sẽ giữ nguyên, còn chuỗi kia đảo chiều. Khi đó, bằng cách chọn gieo một lần hay hai lần, bạn sẽ có thể đấu với hai người cùng một lúc, bất kể họ chọn như thế nào.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width = 1\linewidth]{9}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-25pt}
-	\end{figure}
-	Sau một hồi mò mẫm, tôi tìm được bộ năm con xúc xắc không bắc cầu dưới đây.
-	\begin{figure}[H]
-%		\vspace*{5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width = 1\linewidth]{10}
-		\caption{\small\textit{\color{quantoan}Bộ xúc xắc Grime.}}
-		\vspace*{-15pt}
-	\end{figure}
-	Có vẻ như đây là bộ tốt nhất tôi có thể tìm được. Tôi đã từng viết về chúng, và chúng được đặt tên là bộ xúc xắc Grime.
-	\vskip 0.05cm
-	Với một lần gieo, ta có hai chuỗi thắng bại như sau.
-	\vskip 0.05cm
-	Tất cả các xác suất thắng đều bằng $5/9$, và xác suất thắng trung bình là $63\%$ (việc kiểm tra các tính toán này được dành cho người đọc). Để ý rằng một chuỗi tuân theo thứ tự bảng chữ cái, còn chuỗi kia được sắp xếp theo số chữ cái [của từ tiếng Anh].
+	Quả thực là Dodgson đang viết. Bên cạnh những thứ khác, ông đang nghiên cứu về thứ có thể là đóng góp quan trọng nhất của ông cho nghiên cứu toán học. Thật vậy, ông đã đưa ra một phương pháp mới để tính toán các định thức, trình bày nó trước Hiệp hội Hoàng gia Luân Đôn vào tháng $5$ năm $1866$, và sau đó công trình này xuất hiện trong Kỷ yếu của Hiệp hội Hoàng gia Luân Đôn. Trong vòng một năm sau đó, Dodgson đã phát triển bài báo của mình thành một ``cuốn sách nhỏ", mà ông ghi lại trong nhật ký của mình là ``đã mang lại cho [ông] nhiều rắc rối hơn bất cứ thứ gì mà ông đã từng viết" (Wakeling $1999$, $206-207$). Việc xuất bản cuốn sách bị gián đoạn bởi một chuyến đi đến nước Nga cùng với Henry Parry Liddon từ tháng $7$ đến tháng $9$ năm $1867$. \textit{Chuyên luận về định thức} cuối cùng được xuất bản vào đầu tháng $12$ năm đó (Hình $3$). Cuốn sách này đã nhận được một số lời khen ngợi về đóng góp và tính mới, nhưng bị chỉ trích vì văn phong logic nặng nề và sự lựa chọn thuật ngữ và ký hiệu gây khó đọc.
+	\vskip 0.1cm
+	\textit{Chuyên luận về định thức} là cuốn sách đầu tiên của Dodgson kể từ Alice, nhưng nó không có liên hệ gì với cuốn truyện tuyệt vời đó. Trước khi hoàn thành, Dodgson đã thông báo cho nhà xuất bản của mình, Macmillan, trong một bức thư ngày $11$ tháng $2$ năm $1867$, về ý định đề tên thật của mình cho cuốn sách: ``Tôi có một cuốn sách nhỏ, sắp hoàn thành, mà tôi muốn các ông xuất bản cho tôi -- nhưng tôi e rằng nó không thể được giới thiệu như là của tác giả 'của \textit{Những cuộc phiêu lưu của Alice}'". Độc giả của chuyên luận chắc chắn không có lý do gì để nghi ngờ rằng tác giả của nó thực sự là người đã viết ra \textit{Alice}. Vào thời điểm đó, Dodgson đã giữ được bí mật danh tính của mình và chỉ tiết lộ nó cho một số bạn bè và những người quen may mắn. Những bức thư gửi cho Lewis Carroll được gửi đến nhà xuất bản Macmillan, sau đó nhà xuất bản chuyển tiếp tới ông dưới cái tên Charles L. Dodgson ở Oxford. Khi một cô bé yêu cầu ông viết một câu chuyện Alice khác vào năm $1867$, ông hồi âm dưới cái tên Dodgson, khẳng định rằng ông có một thông điệp cho cô ấy ``từ một người bạn ... ông Lewis Carroll, một sinh vật kỳ dị, khá thích nói những chuyện vô nghĩa".
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =1]{11}
-		%		\caption{\small\textit{\color{}}}
+		\includegraphics[width= 1\linewidth]{3}
+		\caption{\small\textit{\color{quantoan}Hình $3$. The title page of Dodgson’s Elementary Treatise on Determinants, $1867$ (from the Wakeling Collection)}}
 		\vspace*{-10pt}
 	\end{figure}
-	Bạn cũng có thể tìm thấy những bộ xúc xắc không bắc cầu nhỏ hơn. Chẳng hạn, ba con xúc xắc Đỏ, Xanh da trời, Xanh lá cây chính là bộ ba được mô tả ở đầu bài viết, với cùng các xác suất thắng và tính chất đảo chiều.
-	\vskip 0.05cm
-	Với hai lần gieo, ta có các chuỗi thắng bại như sau.
+	Khi \textit{Chuyên luận về định thức} ra mắt, có lẽ chỉ có một nhóm nhỏ độc giả có đặc quyền mới biết được bí mật nhỏ của tác giả, và ``nó là một phát hiện hoàn toàn bất ngờ với những sinh viên đại học lần đầu tiên được biết rằng ông Dodgson của trường Christ Church và Lewis Carroll chính là một" (Colingwood $1898$, tr.$110$). Một trong những người viết đánh giá về chuyên luận dường như biết điều đó, vì ông ta kết thúc bài đánh giá của mình bằng cách hy vọng ``có thêm khảo sát về thế giới thần tiên đại số tùy chọn [của tác giả]". Sự ám chỉ này đến truyện \textit{Alice} chắc hẳn đã khiến Dodgson khó chịu, một người đã rất cố gắng giữ bí mật về danh tính của mình. Dodgson phàn nàn trong một bức thư gửi cho chị dâu của mình, vào ngày $31$ tháng $7$ năm $1890$, rằng ông thấy khá kỳ lạ rằng ``mọi người sẽ không hiểu rằng, khi một tác giả sử dụng \textit{bút danh}, thì mục đích là \textit{tránh} việc công khai danh tính cá nhân, điều mà họ luôn cố gắng thúc giục anh ta". Có vẻ như việc Dodgson nhất quyết giữ bí mật danh tính của mình chỉ khiến những ``kẻ săn đuổi" ông trở nên đông đảo và quyết tâm hơn. Quả là tình huống đó hẳn đã gợi nên sự tò mò và hấp dẫn, và dễ dàng hình dung được sự ngạc nhiên của một độc giả nhiệt tình của \textit{Alice}, không biết rằng tác giả của nó là một giảng viên toán tại Oxford, khi đối diện với cuốn sách tiếp theo của tác giả, về chủ đề định thức, và được cho biết tác giả thực sự là ai. Những gì đã có thể là một giai thoại thú vị đã trở thành một câu chuyện lan truyền chóng mặt khi độc giả bối rối tình cờ lại chính là nữ hoàng.
+	\vskip 0.1cm
+	Câu chuyện này quá hay và không khó để có thể là sự thật. Thực sự là nữ hoàng biết, và có thể rất thích truyện \textit{Alice}. Bà  chỉ cần hỏi, và có thể bà ấy đã hỏi, về cuốn sách tiếp theo của tác giả, để khiến cho \textit{câu chuyện} xảy ra. Đó là một \textit{câu chuyện} tuyệt vời, và sẽ còn tuyệt vời hơn nếu Dodgson không hoàn toàn phủ nhận nó, gần ba mươi năm sau thời điểm mà nó được cho là đã xảy ra.
+	\vskip 0.1cm
+	\textbf{\color{quantoan}Phủ nhận} 
+	\vskip 0.1cm
+	Đến năm $1896$, Dodgson là một tác giả nổi tiếng từ chối tận hưởng danh tiếng của mình. Phần tiếp theo của câu chuyện, \textit{Đi qua tấm gương}, cũng  thành công như truyện \textit{Alice ở xứ sở diệu kỳ}.
+	\vskip 0.1cm
+	Sau đó, ông xuất bản nhiều tác phẩm hư cấu khác, nhưng không có tác phẩm nào thực sự sánh được với hai truyện \textit{Alice}. Là một nhà toán học, ông cũng đã xuất bản nhiều về nhiều chủ đề khác nhau, đặc biệt là bảo vệ một cách đẹp đẽ hình học Euclid trước những sách giáo khoa mới muốn thay thế nó trong các trường trung học và đại học. Trong những năm cuối đời, ông viết một chuyên luận về logic nhằm giúp chủ đề này có thể tiếp cận tới một công chúng rộng rãi. Không giống như các đồng nghiệp của mình tại Đại học Oxford, Dodgson đã chấp nhận lý thuyết logic hình thức mới được phát triển ở Anh bởi George Boole và những người theo trường phái của ông. Phần đầu tiên của chuyên luận của Dodgson, \textit{Logic hình thức}, xuất bản vào tháng $2$ năm $1896$. Lần tái bản thứ nhất, ra mắt vào đầu tháng $6$ cùng năm, có lời tựa được đề ngày $11$ tháng $5$ năm $1896$ (Hình $4$). Ngoài một vài thay đổi và sửa chữa nhỏ, nó có một phần tái bút sau trang tiêu đề, với ghi chú sau:
+	\vskip 0.1cm
+	\textit{Tôi xin nhân cơ hội này để phủ nhận một cách công khai nhất  có thể  một câu chuyện ngớ ngẩn, được lan truyền trên báo chí, về việc tôi đã tặng một số cuốn sách nào đó cho Nữ hoàng. Nó được lặp đi lặp lại liên tục, và là thêu dệt hoàn toàn, đến nỗi tôi nghĩ rằng đáng để tuyên bố, một lần dứt điểm, rằng nó tuyệt đối sai trong mọi chi tiết: không có bất kỳ điều gì thậm chí hơi giống như thế đã từng xảy ra cả.}
+	\vskip 0.1cm
+	Dodgson đã giữ ghi chú này trong lần tái bản thứ hai của cuốn sách, có lời tựa đề ngày $20$ tháng $7$ năm $1896$, nhưng vì lý do nào đó đã bỏ nó khỏi lần tái bản thứ ba, xuất bản vào đầu năm $1897$ nhưng có lời tựa vào Giáng sinh năm $1896$.
+	\vskip 0.1cm
+	Trong ghi chú này, Dodgson đã mạnh mẽ phủ nhận một ``câu chuyện ngớ ngẩn" về việc ông đã tặng một số cuốn sách cho nữ hoàng. Có thể lưu ý rằng giải thích của Dodgson là rất ít ỏi và có thể đề cập đến một sự việc khác, nhưng có vẻ như chỉ đơn giản là ông không muốn kể chi tiết về giai thoại để không quảng bá thêm về nó. Dodgson rõ ràng không thấy thích thú gì với \textit{câu chuyện}. Vì tin đồn đề cập đến các sự kiện được cho là diễn ra vào năm $1867$, một số tác giả tự hỏi tại sao Dodgson phải mất gần ba mươi năm để phủ nhận nó (Wakeling $2015$, tr. $315$). Derek Hudson cho rằng Dodgson có thể đã dùng thời gian này để tranh luận ``với chính bản thân mình liệu có đúng khi phản bác câu chuyện hay không (Hudson $1976$,  tr.$133$). Một lời giải thích hợp lý hơn có thể là Dodgson chỉ đơn giản là phủ nhận câu chuyện khi nó được lan truyền rộng ra, vì không có lý do gì để cho rằng tin đồn được bắt đầu trong cùng thời kỳ mà những sự việc được kể lại trong \textit{câu chuyện} được cho là đã xảy ra.
 	\begin{figure}[H]
 		\vspace*{-5pt}
 		\centering
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale =1]{12}
-%		\caption{\small\textit{\color{}}}
+		\includegraphics[width= 1\linewidth]{4}
+		\caption{\small\textit{\color{quantoan}Hình $4$. The title page of Dodgson’s Symbolic Logic, second edition, $1896$, and the Advertisement page, which includes a denial of the story (from the Wakeling Collection).}}
 		\vspace*{-10pt}
 	\end{figure}
-	Khi gấp đôi số lần gieo, vòng tròn bên ngoài đảo chiều còn ngôi sao bên trong giữ nguyên, nhưng có một ngoại lệ do tính chất đảo chiều của ba con xúc xắc Đỏ, Xanh da trời, Xanh lá cây.
-	\vskip 0.05cm
-	Tuy nhiên, xác suất của ngoại lệ này rất gần với $50\%$ (chính xác là $625/1296$). Trong khi đó, trung bình của tất cả các xác suất thắng còn lại là $62\%$ (cao hơn hẳn so với bộ xúc xắc Oskar), do đó trong thực tế trò chơi ba người vẫn hiệu quả.
-	\vskip 0.05cm
-	Khá là thú vị khi bộ năm con xúc xắc này chứa ba con xúc xắc có tính chất đảo chiều. Tuy nhiên, thú thực là chỗ ngoại lệ vẫn khiến tôi lăn tăn. Tôi muốn biết có tìm được bộ năm con xúc xắc không bắc cầu thỏa mãn các tính chất cần tìm, không có ngoại lệ, hay không, hay đây là bộ tốt nhất có thể.
+	Trên thực tế, có vẻ như không biết tin đồn đã bắt đầu từ khi nào. Trong một thời gian dài, người ta thậm chí đã nghĩ rằng không có bằng chứng văn bản nào về sự tồn tại của tin đồn trước sự phủ nhận của chính Dodgson vào năm $1896$. Tuy nhiên, trong những năm gần đây, một số bài báo trước đó về nó đã được tìm thấy, và giờ đây mọi thứ trở nên rõ ràng rằng tin đồn đã lan truyền khá rộng vào quãng thời gian mà Dodgson phủ nhận nó. Tin đồn chắc chắn tồn tại ít nhất từ năm $1892$, vì nó được tìm thấy trên một số tờ báo thời đó, chẳng hạn như \textit{Sporting Times}. Nó dường như đã được lan truyền rộng rãi hơn sau năm $1895$, đặc biệt là sau khi nó được Ethel Mackenzie McKenna kể lại trong số tháng $8$ năm $1895$ của \textit{Tạp chí Ladies’ Home}:
 	\vskip 0.1cm
-	\textbf{\color{quantoan}Đi tìm một bộ xúc xắc Grime mới}
+	``Trong thời kỳ  mới mẻ của sự thành công rực rỡ, ``Alice" nằm  trên tay của mọi người và những chuyến phiêu lưu vào thế giới thần tiên của cô là niềm vui thích của  người lớn cũng như trẻ em. Nữ hoàng Victoria đã gửi một thông điệp đến tác giả, xin ông gửi cho bà cuốn sách tiếp theo của mình. Giống như tất cả các thần dân của mình, bà nóng lòng muốn nghe nhiều hơn về đứa trẻ thú vị, mà nguyên mẫu là con gái của hiệu trưởng của trường Christ Church. Bà đã rất kinh ngạc khi không lâu sau đó nhận được một cuốn ``\textit{Chuyên luận về định thức}" của C. L. Dodgson, vì khi đó, ông vẫn giữ bí mật về danh tính của mình, và Nữ hoàng, cũng như cả thế giới, đã tin rằng ông chỉ đơn thuần là một người hài hước."
 	\vskip 0.1cm
-	Tôi tìm đến sự trợ giúp của máy tính và sự trợ giúp vô giá của người bạn Brian Pollock, để tìm các bộ năm con xúc xắc không bắc cầu. Việc xem xét tất cả các bộ năm con xúc xắc cùng với các chuỗi thắng bại của chúng là một thách thức tính toán khổng lồ, vì vậy chúng tôi tạo ra một phép thử.
-	\vskip 0.05cm
-	Ba con xúc xắc tạo ra một sơ đồ hoặc với ba mũi tên cùng chiều, mà ta gọi là chuỗi không bắc cầu, hoặc với chỉ hai mũi tên cùng chiều, mà ta gọi là chuỗi bắc cầu.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{13}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-25pt}
-	\end{figure}
-	Chúng tôi muốn tạo ra một bộ năm con xúc xắc không bắc cầu với hai chuỗi không bắc cầu, sao cho khi nhân đôi số lần gieo, một chuỗi giữ nguyên còn một chuỗi đảo chiều.
-	\vskip 0.05cm
-	Điều này có nghĩa là với mọi bộ ba trong năm con xúc xắc, nếu chúng tạo thành một chuỗi không bắc cầu với một lần gieo, thì với hai lần gieo chúng sẽ tạo thành một chuỗi bắc cầu. Nếu một chuỗi giữ nguyên tính bắc cầu hoặc không bắc cầu khi gấp đôi số lần gieo, ta nói bộ ba con xúc xắc đó không qua được phép thử.
-	\vskip 0.05cm
-	Mỗi bộ năm con xúc xắc có $10$ bộ ba. Mọi bộ ba đều cần qua được phép thử. Hơn nữa, nếu mọi bộ ba qua được phép thử thì chúng ta đã tìm được một bộ năm con xúc xắc thỏa mãn.
-	\vskip 0.05cm
-	Phép thử này cho phép chúng tôi tốn ít tính toán hơn để loại các bộ không thỏa mãn.
-	\vskip 0.05cm
-	Ban đầu, chúng tôi chỉ xét các con xúc xắc có các giá trị từ $0$ đến $9$. Các bộ có kết quả hòa thì không hay lắm. Nhưng sau khi loại các bộ có kết quả hòa, không có bộ năm con xúc xắc nào qua được phép thử.
-	\vskip 0.05cm
-	Chỉ có một số ít bộ bốn con xúc xắc qua được phép thử, chúng chính là bộ xúc xắc Grime bỏ đi một con. Điều này chứng tỏ bộ xúc xắc Grime quả đúng là bộ tốt nhất với các giá trị từ $0$ đến $9$ và không có hòa.
+	Tạp chí của Mỹ này có lượng độc giả rộng lớn và ngày càng tăng vào thời Dodgson, và vào năm $1904$, nó trở thành tạp chí đầu tiên đạt được số lượng một triệu người đặt báo. Lời kể của McKenna về \textit{câu chuyện} được đăng lại trên các tạp chí khác của Mỹ, nhất là trong các mục tin đồn, tin vắn và tin tức văn học. \textit{Câu chuyện} hẳn cũng đã lan tới một số tờ báo của Anh, vì nó được đăng trên tờ \textit{Newcastle Weekly Courant}. Đúng là \textit{câu chuyện} không được tìm thấy trên các tờ báo lớn của Anh, một sự thật có thể được giải thích là do họ không muốn xuất bản những bài viết tiết lộ danh tính của Dodgson. Được biết, Dodgson không hài lòng với những bài viết như vậy và đã liên tục viết thư phàn nàn đến những tạp chí và nhà xuất bản của Anh đã tiết lộ hoặc muốn tiết lộ tên thật đằng sau bút danh của ông. Các tạp chí nước ngoài hiển nhiên nằm ngoài tầm ảnh hưởng của Dodgson, như ông thừa nhận trong một bức thư gửi cho Falconer Madan vào ngày $8$ tháng $12$ năm $1880$: ``Tôi e rằng các ấn phẩm của Mỹ nằm ngoài tầm khiếu nại của các nhà văn Anh: chỉ ở Anh, người ta mới có thể hy vọng ngăn tên mình được công bố."
 	\vskip 0.1cm
-	\textbf{\color{quantoan}Với giá trị lớn hơn}
+	Vào năm $1895$, \textit{câu chuyện} rõ ràng là đã ``lan truyền trên báo chí" và được ``lặp đi lặp lại liên tục", như Dodgson đã viết trong lời phủ nhận của mình. Người ta lập luận rằng ``không chắc Dodgson đã xem tạp chí [\textit{Tạp chí Ladies’ Home}] này" (Wakeling $2005$, tr. $257$); tuy nhiên, ông có thể đã thấy một trích dẫn về nó được đăng lại trên các tờ báo của Anh. Chúng ta cũng biết rằng Edward Bok, chủ bút của \textit{Tạp chí Ladies’ Home}, đã đến thăm Dodgson ở Oxford để thuyết phục ông đóng góp bài cho tạp chí. Chuyến thăm này được ghi lại trong tự truyện của Bok, nhưng ngày tháng không được nêu rõ ràng. Tuy nhiên, lời kể đó gợi ý rằng nó trùng hợp với lần Bok đến thăm Rudyard Kipling, người đã được thuyết phục đóng góp câu chuyện ``William the Conqueror" của mình cho tạp chí. Do câu chuyện của Kipling xuất bản vào cuối năm $1895$, sẽ khá hợp lý khi cho rằng chuyến thăm diễn ra trước đó. Điều thú vị là Bok kể về việc ông đã hỏi Dodgson về câu chuyện gửi tặng cuốn sách \textit{Chuyên luận về định thức} cho nữ hoàng, một câu hỏi mà Dodgson  không bình luận, nhưng ``khuôn mặt của ông ấy hoàn toàn không có biểu hiện gì ngoài vẻ trắc ẩn nhằm nói với người chủ bút rằng ông ta đang mắc một sai lầm khủng khiếp" (Bok $1920$, tr. $222-223$). Trước sự thất vọng lớn của Bok, Dodgson chỉ đơn giản  phủ nhận việc mình là tác giả của hai cuốn sách \textit{Alice}. Nếu lời kể của Bok là sự thật, ông ta đã sớm được chứng kiến Dodgson bác bỏ câu chuyện, trước khi ông phủ nhận bằng văn bản, trong cuốn sách. Nhưng chúng ta có nên tin Dodgson không?
 	\vskip 0.1cm
-	Một cách tự nhiên, bước tiếp theo là thử tìm những con xúc xắc với giá trị lớn hơn. Vẫn với tiêu chuẩn không hòa, kết quả đầu tiên sử dụng các giá trị từ $0$ đến $13$.
-	\begin{table}[H]
-		\vspace*{-10pt}
-		\centering
-		\renewcommand{\arraystretch}{1.1}
-		\begin{tabular}{|c|c|c|c|c|c|c|}
-			\hline
-			$A$ &$4$& $4$& $4$& $4$& $4$& $9$\\
-			\hline
-			$B$ &$2$& $2$& $2$& $7$& $7$& $12$\\
-			\hline
-			$C$ &$0$& $5$& $5$& $5$& $5$& $10$\\
-			\hline
-			$D$ &$3$& $3$& $3$& $3$& $8$& $13$\\
-			\hline
-			$E$ &$1$& $1$& $6$& $6$& $6$& $11$\\
-			\hline
-		\end{tabular}
-		\vspace*{-10pt}
-	\end{table}
-	Có hai bộ như vậy sử dụng các giá trị từ $0$ đến $13$, bộ thứ hai chỉ khác bộ trên một chút xíu. Chúng cũng là những bộ năm duy nhất với các giá trị liên tiếp.
-	\vskip 0.05cm
-	Tôi rất sung sướng với kết quả này, nhưng xác suất thắng trung bình chỉ là $59\%$, thấp hơn bộ xúc xắc Grime. Vì vậy, chúng tôi tiếp tục đi tìm một bộ với xác suất thắng lớn hơn.
-	\vskip 0.05cm
-	Xác suất thắng tăng một cách chậm chạp theo các giá trị trên mặt xúc xắc. Dưới đây là một trong những bộ mạnh nhất, sử dụng các giá trị từ $0$ đến $17$.
-	\begin{table}[H]
-		\vspace*{5pt}
-		\centering
-		\renewcommand{\arraystretch}{1.21}
-		\begin{tabular}{|c|c|c|c|c|c|c|}
-			\hline
-			$A$ &$4$& $4$& $8$& $8$& $8$& $17$\\
-			\hline
-			$B$ &$2$& $2$& $2$& $15$& $15$& $15$\\
-			\hline
-			$C$ &$0$& $9$& $9$& $9$& $9$& $9$\\
-			\hline
-			$D$ &$3$& $3$& $3$& $3$& $16$& $16$\\
-			\hline
-			$E$ &$1$& $1$& $10$& $10$& $10$& $10$\\
-			\hline
-		\end{tabular}
-		\vspace*{-10pt}
-	\end{table}
-	Đến lúc này, tăng giá trị không cải thiện xác suất thắng nữa. Vì các giá trị không còn là các số liên tiếp, một số giá trị có thể xê dịch trong các khoảng mà không ảnh hưởng đến xác suất thắng, nghĩa là bộ này có thể lặp lại dưới những dạng hơi khác đi một chút. Việc tìm kiếm những bộ tốt hơn đã chững lại.
-	\vskip 0.05cm
-	Vì lý do thẩm mỹ, tôi quyết định bớt đi $8$ ở mỗi mặt, kết quả nhận được là một bộ xúc xắc Grime mới, với các giá trị từ $-8$ đến $9$:
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{14}
-		\caption{\small\textit{\color{quantoan}Bộ xúc xắc Grime mới.}}
-		\vspace*{-15pt}
-	\end{figure}
-	Cũng như bộ xúc xắc Grime gốc, bộ này tạo ra hai chuỗi không bắc cầu, một theo thứ tự bảng chữ cái, một theo số chữ cái. Khi gieo hai lần, chuỗi thứ nhất giữ nguyên, trong khi chuỗi thứ hai đảo chiều.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{15}
-%		\caption{\small\textit{\color{}}}
-		\vspace*{-20pt}
-	\end{figure}
-	Trong trò chơi một lần gieo, bộ Grime mới có xác suất thắng giống hệt bộ Grime gốc. Khi gieo hai lần, bộ mới nói chung yếu hơn, với xác suất thắng trung bình $60{,}4\%$, kém $0{,}7\%$ so với bộ gốc. Tuy nhiên, điểm quan trọng là mọi xác suất thắng đều lớn hơn $50\%$, từ đó cho phép tạo ra một trò chơi ba người thực sự như sau.
-	\vskip 0.05cm
-	Mời hai người mỗi người chọn một con xúc xắc, nhưng không nói trước sẽ gieo một lần hay hai lần. Bất kể họ chọn thế nào, bạn cũng sẽ chọn được một con xúc xắc thắng được cả hai. Nếu họ chọn hai con xúc xắc liền nhau theo thứ tự bảng chữ cái, hãy chơi phiên bản một lần gieo. Nếu họ chọn hai con xúc xắc liền nhau theo số chữ cái, hãy chơi phiên bản hai lần gieo. 
+	\textbf{\color{quantoan}Liệu rằng nó đã xảy ra?}
 	\vskip 0.1cm
-	\textbf{\color{quantoan}Một trò cá cược}
+	Việc tìm hiểu sự thật về \textit{câu chuyện} có vẻ là việc làm kỳ quái và thiếu tôn trọng bởi vì Dodgson đã phủ nhận nó một cách rõ ràng. Tuy nhiên, chúng ta không được quên rằng Dodgson thường xuyên phủ nhận (một cách không đúng) rằng ông là tác giả của  \textit{Alice}, vì vậy chúng ta không có thêm lý do gì để tin vào sự thật của lời phủ nhận này so với tất cả những lời phủ nhận khác mà chúng ta biết là không đúng. Câu chuyện của chúng ta kết nối tác giả của \textit{Alice} với tác giả của \textit{Chuyên luận về định thức}. Dodgson không có lựa chọn nào khác ngoài việc phủ nhận nó, bất kể sự thật là gì, nếu ông ấy muốn -- và chúng ta biết rằng ông thực sự muốn -- giữ bí mật về danh tính của mình.
 	\vskip 0.1cm
-	Liệu chúng ta có thể kỳ vọng thắng cả hai người? Chúng ta dĩ nhiên đã cải thiện cơ hội, với xác suất trung bình để thắng cả hai người vào khoảng $44\%$, tăng $5\%$ so với bộ xúc xắc Oskar. Nhưng như vậy, với xác suất thắng cả hai dưới $50\%$, chúng ta làm thế nào để thắng? Hãy xét trò chơi sau đây.
+	Chúng ta hầu như không thể nhấn mạnh đủ mức độ quan trọng của việc giữ kín danh tính đối với Dodgson. Các tiểu sử về ông chứa nhiều mẩu chuyện về việc ông từ chối là tác giả của truyện \textit{Alice} khi được hỏi về nó. Dodgson cũng từ chối lời mời tham dự các buổi chiêu đãi do nhà xuất bản của ông tổ chức, nơi ``hầu như không thể giữ được sự ẩn danh". Khi những lá thư được gửi đến trường Christ Church cho ông dưới cái tên Lewis Carroll , ông  đã gửi trả lại chúng mà không mở. Năm $1890$, ông thậm chí còn ban hành một thông cáo để gửi cho những người đã gửi thư đến như sau:
 	\vskip 0.1cm
-	Thách hai người bạn chơi một trò xúc xắc, trong đó bạn đồng thời đấu với cả hai. Nếu thua, bạn mất $1$ đô--la cho đối thủ, ngược lại, đối thủ đưa cho bạn $1$ đô--la. Như vậy, nếu thắng cả hai, bạn được $2$ đô-la; nếu thua cả hai, bạn mất $2$ đô--la; và nếu thắng một thua một thì bạn hòa vốn. Bạn và hai người bạn sẽ chơi $100$ ván.
+	``Ông Dodgson thường xuyên bị những người lạ gửi thư đến với giả định khá trái phép rằng ông tuyên bố, hoặc trong một chừng mực nào đó thừa nhận quyền tác giả của những cuốn sách không được xuất bản dưới tên ông, đến mức ông thấy cần phải tuyên bố điều này, một lần dứt điểm, như một câu trả lời cho tất cả các bức thư như vậy. Ông ta không tuyên bố hay thừa nhận bất kỳ mối liên hệ nào với bất kỳ bút danh nào, hoặc với bất kỳ cuốn sách nào không được xuất bản dưới tên của chính ông ta. Do đó, không có quyền giữ lại, hoặc thậm chí đọc thư bên trong, ông ta gửi trả lại nó cho người viết thư đã viết sai địa chỉ."
 	\vskip 0.1cm
-	Với những con xúc xắc tiêu chuẩn, mỗi người chơi đều kỳ vọng hòa vốn, vì số lần thắng và số lần thua như nhau.
+	Lưu ý rằng Dodgson không chính thức phủ nhận là tác giả của các truyệnAlice trong thông cáo này; ông chỉ đơn thuần từ chối việc đòi hoặc thừa nhận quyền tác giả đó. Nhưng Lloyd Humberstone khuyến cáo một cách đúng đắn rằng
+	``Chúng ta không nên coi trọng những lời phủ nhận [của Dodgson] hơn những lời phủ nhận của một nghi phạm bị bắt trong cuộc truy tìm Jack the Ripper của cảnh sát, người khẳng định rằng anh ta không muốn được biết đến với cái tên đó, rằng anh ta không tuyên bố -- hay thừa nhận -- đã thực hiện bất kỳ vụ giết người nào, v.v." (Humberstone $1995$, tr. $498$).
 	\vskip 0.1cm
-	Tuy nhiên, với bộ xúc xắc Oskar, bạn kỳ vọng thắng cả hai trong $39\%$ số lần chơi, thua cả hai trong $28\%$, và lãi $22$ đô--la.
+	Đúng là bí mật về danh tính của Dodgson dần dần được hé lộ và có lẽ nó đã trở thành một bí mật công khai vào những năm cuối đời của ông. Các tờ báo thỉnh thoảng có đề cập đến danh tính của ông, và từ điển các bút danh thường liệt kê ông. Khá hợp lý khi cho rằng bí mật có lẽ được lan truyền qua số đông bạn bè và người quen của ông. Tuy nhiên, Dodgson vẫn từ chối thừa nhận là tác giả của những truyện \textit{Alice} khi những người lạ tiếp cận ông hoặc viết thư cho ông về nó. Những nỗ lực nhiệt thành của Dodgson để bảo vệ bí mật của mình,  thậm chí ngay cả sau này khi danh tính của ông đã được biết đến rộng rãi, hẳn đã khiến những người cùng thời của ông phải tò mò. Các cuốn tiểu sử về ông thuật lại cái cách mà trong suốt cuộc đời của mình, ông ấy là ``\textit{mục tiêu thường xuyên của những lời đồn đại}".
 	\vskip 0.1cm
-	Nhưng thậm chí tốt hơn, với bộ xúc xắc Grime mới, bạn có thể kỳ vọng thắng cả hai trong $44{,}1\%$ số lần chơi và chỉ thua cả hai trong $23{,}6\%$, lãi gần $41$ đô-la (và rất có thể “lỗ” mất hai người bạn)!
+	Việc phủ nhận \textit{câu chuyện} của Dodgson cần phải được hiểu trong bối cảnh này: \textit{câu chuyện} chỉ là một trong số rất nhiều tin đồn về tác giả của \textit{Alice} và sự phủ nhận chỉ là một trong số rất nhiều tình huống mà Dodgson cố gắng giữ bí mật danh tính của mình. Tuy nhiên, có một nét nổi bật về việc Dodgson phủ nhận \textit{câu chuyện} trong cuốn \textit{Logic Hình thức} của ông. Dodgson tin tưởng vào lợi ích xã hội của logic hình thức và muốn cuốn sách của mình dễ tiếp cận đối với rộng rãi độc giả. Để quảng bá rộng rãi hơn cho cuốn sách chuyên luận  của mình, ông đã dùng bút danh văn học của mình thay vì tên thật, vốn thường được sử dụng cho các công trình toán học. Vì vậy, lời phủ nhận mà ông  đưa vào chuyên luận có thể là dịp duy nhất mà Dodgson, dưới cái tên Lewis Carroll, phủ nhận mối liên hệ của ông với Charles L. Dodgson.
 	\vskip 0.1cm
-	Mời các bạn hãy tự thử trò chơi này và trải nghiệm cả cảm giác thành công cũng như thất bại!
+	Chúng tôi đã nói ở trên rằng \textit{câu chuyện} thực sự không khó để có thể là  thật. Thật vậy, có những lý do chính đáng để tin rằng \textit{câu chuyện} đã thực sự xảy ra, và người ta sẽ không ngạc nhiên nếu nó đã xảy ra. Tuy nhiên, Thomas B. Strong, một người bạn của Dodgson, trong hồi ký viết năm $1932$, đưa ra hai lý do để không tin vào điều đó:
 	\vskip 0.1cm
-	\textbf{\color{quantoan}Tài liệu tham khảo}
+	``Thật trái ngược với toàn bộ thái độ của Dodgson đối với Hoàng gia và với cung cách đúng mực của ông ấy nếu  ông ấy giễu cợt Nữ hoàng như vậy. Và nó hoàn toàn trái ngược với thái độ của ông ấy đối với những cuốn sách của mình. Ông ấy luôn từ chối thừa nhận với bất kỳ người nào, ngoại trừ một số những người có đặc quyền đặc biệt, rằng ông ấy là Lewis Carroll."
 	\vskip 0.1cm
-	[$1$] M. Gardner, The paradox of the nontransitive dice and the elusive principle of indifference, \textit{Sci. Amer}. $\pmb{223}$ no. $6$ ($1970$) $110-114$.
+	Có vẻ như Strong không nhận thấy rằng hai lý do ông ấy đưa ra có phần trái ngược nhau. Thật vậy, Dodgson hoặc phải gửi cuốn sách tiếp theo của mình, và do đó tiết lộ danh tính của ông, hoặc từ chối gửi nó, và do đó từ chối yêu cầu của nữ hoàng, mặc dù ông có thể đã  lập luận rằng cuốn sách tiếp theo của Lewis Carroll hoàn toàn không phải là cuốn sách tiếp theo của Charles Dodgson.
 	\vskip 0.1cm
-	[$2$] R. P. Savage Jr., The paradox of nontransitive dice, \textit{Amer. Math. Monthly} $\pmb{101}$ ($1994$) $429-436$, \url{http://dx.doi.org/10.2307/2974903}.
-	\vskip 0.1cm 
-	[$3$] H. Steinhaus, S. Trybuła, On a paradox in applied probabilities, \textit{Bull. Acad. Polon. Sci.} $7$ ($1959$) $67-69$.
+	Lưu ý rằng lý do đầu tiên mà Strong đưa ra cho thấy rằng việc Dodgson gửi tặng một cuốn sách toán cho nữ hoàng là điều đáng hổ thẹn và thô lỗ. Nhưng lý do thứ hai có vẻ như không đúng, vì chúng ta có thể tưởng tượng Dodgson hẳn sẽ vui vẻ coi nữ hoàng là một trong số ``những người có đặc quyền" được ông đã tiết lộ danh tính của mình, và chắc chắn ông đã tiết lộ điều đó để được giao thiệp với một số nhân vật nổi tiếng cùng thời.
 	\vskip 0.1cm
-	[$4$] S. Trybuła, On the paradox of three random variables, \textit{Zastos. Mat.} $\pmb{5}$ ($1960/1961$) $331-332$.
+	Dodgson không đáng tin cậy lắm khi ông phủ nhận những \textit{câu chuyện} tiết lộ danh tính của mình; thậm chí chỉ cần nhìn qua danh sách những phủ nhận của ông là đủ để ủng hộ việc không tin vào ông. Nhưng có thể có một lý do chính đáng để tin Dodgson một lần. Thật vậy, việc Dodgson phủ nhận \textit{câu chuyện} sẽ không ảnh hưởng đến niềm tin của chúng ta về nó nếu nhân vật liên quan không phải là nữ hoàng. Tôi không tin rằng việc tặng một cuốn sách toán học cho nữ hoàng sẽ đi ngược lại cách hành xử đúng mực của Dodgson. Tuy nhiên, việc công khai phủ nhận một câu chuyện liên quan đến nữ hoàng, câu chuyện có thể sẽ được nữ hoàng công nhận là thật, có thể sẽ bị coi là đáng hổ thẹn đối với một thần dân thời Victoria, một người ``yêu nước nồng nàn và là một tín đồ trung thành của những hoạt động của hoàng gia" (Hudson $1976$, $133$).
 	\vskip 0.1cm
-	[$5$] S. Trybuła, On the paradox of $n$ random variables, \textit{Zastos. Mat.} $\pmb{8}$ ($1965$) $143-154$.
-\end{multicols}
-\vspace*{-10pt}
-\rule{1\linewidth}{0.1pt}
-\blfootnote{\color{quantoan}\color{quantoan}$^1$Viện Toán học.}
-\begingroup
-\AddToShipoutPicture*{\put(215,238){\includegraphics[scale=1]{../tieude.pdf}}}
-\centering
-\endgroup
-
-\vspace*{43pt}
-
-\begin{multicols}{2}	
-	Quy nạp là một phương pháp chứng minh toán học. Một cách nôm na là ``chứng minh dần dần". Có thể so sánh phép quy nạp của các nhà toán học với việc xây một tòa nhà. Ta sẽ đặt viên gạch đầu tiên, rồi viên gạch thứ hai, v.v, cho đến khi ngôi nhà được xây xong. Tất nhiên, để đơn giản (việc mà toán học luôn làm), ta sẽ không xét tới việc hoàn thiện, vôi~ve ... 
+	Được biết, Dodgson rất kính trọng nữ hoàng và hoàng gia. Trong suốt cuộc đời mình, ông đã có một số dịp gặp gỡ các thành viên của hoàng gia, và ông chắc chắn đã quen với một số người trong họ. Ông đã tường thuật chi tiếttrong nhật ký của mình chuyến thăm trường Christ Church của nữ hoàng, vào tháng $12$ năm $1860$. Trong các chuyến thăm Oxford của các thành viên hoàng gia, ông tìm cách được giới thiệt để chụp ảnh họ. Dodgson là một nhiếp ảnh gia có tiếng, được nhiều nhân vật nổi tiếng cùng thời làm mẫu. Đáng chú ý, ông đã chụp được ảnh Hoàng tử Frederick của Đan Mạch vào năm 1863 và Hoàng tử Leopold (con trai út của nữ hoàng) vào năm 1875. Theo Collingwood, một số bức ảnh của  Dodgson ``đã được nữ hoàng xem, và bà nói rằng rất thích chúng"  (Collingwood $1898$, tr. $102-104$).
 	\vskip 0.1cm
-	So với xây nhà thì quy nạp toán học có hai điểm khác biệt. Thứ nhất là các nhà toán học sẽ giống người thiết kế hơn là người thi công. Cụ thể hơn, họ sẽ thiết lập một quy trình để xây, làm thế nào để đặt viên gạch thứ hai lên trên viên thứ nhất, viên thứ ba lên trên hai viên đã đặt, vân vân. Khi quy trình đã rõ, thì cứ thế mà làm. Tất nhiên để đơn giản hóa, chúng ta tiếp tục giả thiết công nhân \linebreak nghiêm túc.
+	Đúng là trong thư từ cá nhân của mình, Dodgson đã bịa ra một số câu chuyện liên quan đến nữ hoàng để mua vui cho các bạn thư của ông. Một lần, ông đã ``soạn một bức thư giả của nữ hoàng Victoria mời mình đến một bữa tiệc trong vườn". Một lần khác, ông giả vờ rằng nữ hoàng đã hỏi xin ông một bức ảnh, nhưng ông từ chối vì ``nguyên tắc của ông là không bao giờ cho ảnh của mình, ngoại trừ cho những cô gái \textit{trẻ}" (Cohen và Green $1979$, tr. $135-136$ và $116$). Edward Wakeling đã nhận xét tinh tế rằng ``đó dĩ nhiên chính là cách mà những câu chuyện và tin đồn bắt đầu" (Wakeling $2015$, tr. $316$). Vì vậy, có thể \textit{câu chuyện} của chúng ta cũng được bắt đầu bởi chính Dodgson, để đùa vui một số người bạn gần gũi, trước khi trò đùa trở thành một tin đồn không thể ngăn chặn.
 	\vskip 0.1cm
-	Khác biệt thứ hai quan trọng hơn. Đó là, tận dụng quy trình đã thiết lập, các nhà toán học ``chém luôn'', rằng có thể xây dựng được ngôi nhà với {\em vô hạn} viên gạch. Để so sánh, các bạn có thể tìm hiểu về việc xây tháp Babel. Đây thực sự là ``chém'', vì lấy đâu ra đất để nung vô hạn viên gạch. Tuy nhiên ý tưởng từ trong đầu sinh ra, không cần đất. 
-		\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{111}
-		\caption{\small\textit{\color{quantoan}Tháp Babel của Pieter Bruegel the Elder ($1563$), nguồn Wikipedia.}}
-		\vspace*{-10pt}
-	\end{figure}
-	``Nhiều'' có thể gây rắc rối, còn ``vô hạn'' nói chung nguy hiểm. Ta hãy so sánh hai cách tư duy, chẳng hạn, để chứng minh rằng bình phương một số tự nhiên rồi thêm $1$ không bao giờ chia hết cho $3$.
+	\textbf{\color{quantoan}Tác giả của \textit{Alice}}
 	\vskip 0.1cm
-	Hãy cho tôi một số tự nhiên, tôi sẽ chứng minh bình phương của nó rồi thêm $1$ không chia hết cho $3$!
+	Đương nhiên, sự phủ nhận của Dodgson về \textit{câu chuyện} vào năm $1896$ không làm nó ngừng lan truyền. Ví dụ, nó được tìm thấy vào năm sau đó trong mục về Dodgson trong cuốn sách đầy tham vọng \textit{Thư viện về Văn học hay nhất thế giới}, trong đó chủ biên nhận xét rằng 
 	\vskip 0.1cm
-	Đây giống như một lời thách thức của những nhà ảo thuật. Đưa thế nào là việc của bạn, chứng minh là việc của tôi.
+	``hiếm khi một bộ óc kép như vậy -- khi thì viết những điều hoàn toàn ngớ ngẩn và rất dí dỏm, khi thì lại khám phá những điều phức tạp của toán học cao cấp -- lại có một thể hiện kỳ lạ hơn (Warner $1897$, tr. $309$).
 	\vskip 0.1cm
-	Quy nạp không như thế. Khi quy nạp tôi sẽ chỉ cho bạn thấy từng số, từng số một, khi bình phương lên, rồi thêm $1$ sẽ không thể chia hết cho $3$. 
+	\textit{Câu chuyện} cũng được tìm thấy vào năm $1897$ trong chuyên mục tin ngắn của tờ \textit{Northern Echo}, kèm theo một số câu thơ lấy cảm hứng từ đó.
 	\vskip 0.1cm
-	Điểm mấu chốt ở đây là, có vô hạn số tự nhiên, làm từng bước từng bước thế thì đến bao giờ?! Tới chỗ này, các nhà toán học quay trở lại lập luận ``cùn" nêu ở trên: cứ cho tôi một số cụ thể, thì thể nào tôi cũng sẽ đi đến. 
+	Kể từ đó, \textit{câu chuyện} được kể thường xuyên đến mức có đến mấy bản khác nhau của nó. Một số phiên bản cho rằng Dodgson đã gửi cho nữ hoàng cả một bộ sách chứ không chỉ là cuốn \textit{Chuyên luận về định thức}. Một số phiên bản khác cho rằng thực ra người bán sách của nữ hoàng mới là người được yêu cầu giao sách của Dodgson cho nữ hoàng. Bất chấp sự khác biệt của chúng, tất cả các lời kể đều thống nhất ở một điểm trọng tâm: nữ hoàng đã yêu cầu một tác phẩm khác của tác giả của một câu chuyện thiếu nhi và thật ngạc nhiên, bà đã nhận được một cuốn sách toán.
 	\vskip 0.1cm
-	Đây chính là cách các nhà toán học tiếp cận với vô hạn từ hữu hạn: tất cả là vô hạn nhưng từng cá thể là hữu hạn. 
+	Không khó để hiểu được sự thành công của ``giai thoại hấp dẫn không chịu phai nhạt, mặc dù nó khá sai sự thật" này (Hudson $1976$, tr. $132$). ``Riêng việc nó trùng khớp quá mức với hình ảnh phổ biến" về tính cách kép đã đủ giải thích cho sự dai dẳng của nó (Heath $1974$, tr.$3$). Từ lâu, công việc chính của các nhà viết tiểu sử của Dodgson là giải quyết điều mà họ coi là một nghịch lý: ``Bằng cách nào mà Lewis Carroll, một nhà toán học  khó tính, dè dặt và sùng đạo sâu sắc thời Victoria, lại có thể tạo ra những câu chuyện đã trở thành những tác phẩm thiếu nhi kinh điển được yêu thích nhất trong văn học Anh?" (Cohen $1995$, tr. $19$).
 	\vskip 0.1cm
-	Ta hãy thử nhìn vấn đề từ một góc độ khác. Bây giờ sẽ không ai thách thức ai, mà tôi và bạn, chúng ta sẽ cùng suy nghĩ về việc chứng minh khẳng định trên bằng {\em phản chứng}. Phản chứng nghĩa là thay vì {\em chứng minh nó đúng}, ta sẽ chứng minh nó {\em không thể sai} -- như các bạn biết đó, toán học luôn đơn giản hóa mọi vấn đề, chỉ có thể đúng hoặc sai chứ không có khả năng nửa đúng nửa sai. 
+	Nhiều nhà nghiên cứu đã cố gắng giải quyết bí ẩn này và chứng minh sự thống nhất (hoặc ít nhất là sự tương đồng) giữa hai mặt của  thiên tài của Dodgson. Một số người đã diễn giải quá mức các câu chuyện Alice nhằm tìm kiếm những chân lý toán học ẩn náu mà chỉ một nhà toán học mới có thể lồng vào đó. Một số người khác đã phóng đại phần toán học giải trí của Dodgson mà chỉ một nhà văn hài hước mới có thể tạo ra. Nhưng từ lâu, chiến lược chính của các người theo chủ nghĩa Carroll là làm cho cái tên Dodgson trở nên mờ nhạt, chìm về phía sau vì cho rằng ``những công trình của Charles Dodgson kém thú vị hơn những tác phẩm của Lewis Carroll".
 	\vskip 0.1cm
-	Để chứng minh nó không thể sai, ta sẽ đặt vấn đề nếu nó sai thì sao. Nếu mệnh đề trên sai, nghĩa là có số tự nhiên mà khi bình phương lên rồi thêm $1$ thì chia hết cho $3$.
-	\vskip 0.1cm 
-	Nếu có số như thế, thì sẽ có {\em số nhỏ nhất} trong chúng. Nếu ``số nhỏ nhất'' đó lớn hơn $3$, ta trừ nó đi $3$ đơn vị, số mới bình phương lên thêm $1$ vẫn chia hết cho $3$, vô lý vì số mới vẫn là số tự nhiên, lại bé hơn ``số nhỏ nhất''! Vậy ``số nhỏ nhất'' không quá $3$, nghĩa là $0$, $1$, hoặc $2$. Rõ ràng cả ba số này, khi bình phương lên thêm $1$ không chia hết cho $3$. Vô lý!
+	Việc hạ thấp Dodgson để ủng hộ Carroll đã bắt đầu từ khi Dodgson còn sống. Ví dụ, một người viết nhận xét về cuốn sách \textit{Pillow--Problems} của Dodgson, một tập hợp các bài toán mà ông ký bằng tên thật của mình, đã bày tỏ một cách rõ ràng thị hiếu của mình: 
 	\vskip 0.1cm
-	Vô lý nghĩa khẳng định của chúng ta không thể sai. Vì không thể sai nên nó phải đúng. Nhắc lại là chỉ trong toán học, điều không sai mới là điều đúng các bạn nhé.
+	``Và, sau cùng, thế giới cần Lewis Carroll, người một mình hiểu được ``trí thông minh siêu hình" của trẻ nhỏ, và tức thì đưa người lớn tuổi nhất trong chúng ta đi dạo qua vùng đất mơ ước của chúng, hơn là ông Dodgson, người không có vẻ gì là một người du hành trong biển sâu của tư tưởng (Newton, Kelvin là vậy) mà chỉ là một nhà toán học tao nhã."
 	\vskip 0.1cm
-	Bản chất của vấn đề ở đây là gì? Các bạn hãy liên hệ với bài viết trước về tập hợp\footnote[2]{\color{quantoan}Xem ``Tự do trong Toán học'', Pi  Tập $6$, Số $5$, $2022$.}. Ở đây ta xét tập hợp những số tự nhiên mà khẳng định ``bình phương thêm $1$ chia hết cho $3$" đối với nó là SAI. Ta giả thiết phản chứng rằng tồn tại số như vậy, nghĩa là tập hợp này khác {\em rỗng}. Từ đó ta chọn số nhỏ nhất trong nó. Bản chất của vấn đề là sự tồn tại của số nhỏ nhất đó. Đây cũng là bản chất của phép quy nạp, và rộng hơn là bản chất của tập số tự nhiên: mọi tập hợp con khác rỗng đều chứa số nhỏ nhất.  
+	Ngoài sự bực bội khi thấy danh tính của mình bị tiết lộ, người ta có thể tưởng tượng được Dodgson có thể đã cảm thấy khó chịu như thế nào khi danh tiếng văn học can thiệp vào việc đánh giá các công trình toán học của ông. Tuy nhiên, sự cám dỗ của việc liên kết hai cái tên là rất mạnh, và nhiều đồng nghiệp làm toán của Dodgson chắc chắn đã không cưỡng lại được. Ví dụ, Hugh MacColl, người đã đã viết nhận xét về một số cuốn sách toán của Dodgson trong tạp chí \textit{Athenaeum} đã đề cử cuốn sách \textit{Lý thuyết mới của sự song song} của Dodgson, mà ông thấy ``cũng thú vị như những điều kỳ lạ cô bé Alice đã gặp ở xứ sở diệu kỳ". Một ví dụ khác xảy ra vào năm $1894$, khi một bài toán  logic do Dodgson nghĩ ra được lưu truyền giữa các nhà logic học người Anh. John Venn muốn thảo luận về nó trên báo in và xin phép Dodgson. Ông đồng ý nhưng yêu cầu Venn ``không được đề cập với bất kỳ ai  \textit{tên thật} [của ông], một cách có liên quan đến bút danh [của ông]". Venn hẳn đã rất bối rối, vì ông đã không đề cập đến cả hai cái tên trong cuốn sách của mình, mà chỉ gọi bài toán logic đang được thảo luận là Bài toán Alice, ``người đề xuất nó, đối với độc giả nói chung, được biết đến nhiều hơn trong một nhánh văn học rất khác."
+	\vskip 0.1cm
+	Tình hình sau đó không có nhiều thay đổi. Trong cuốn \textit{Cơ sở về Lịch sử toán} học, Nicolas Bourbaki gọi \textit{Chuyên luận về định thức} của Dodgson  là  ``một cuốn sách khó hiểu, với sự cẩn thận và tỉ mỉ đặc trưng của ông,  tác giả nổi tiếng của \textit{Alice ở xứ sở diệu kỳ}"  mà không nêu tên tác giả của nó; chỉ cần biết rằng chuyên luận được viết bởi tác giả của \textit{Alice}. Sự nổi tiếng ngày nay của Dodgson trong giới toán học chắc chắn đã được hưởng lợi từ vị thế văn học của ông. Ngày nay, có một nhánh nghiên cứu đáng nể chuyên về Dodgson trong cộng đồng các nhà sử học toán học, không như nhiều đồng nghiệp đã bị lãng quên của ông. Dodgson có lẽ sẽ không bao giờ thiếu độc giả, nhưng ông luôn đối mặt với nguy cơ không được đọc một cách nghiêm túc. Độc giả hiện đại của Dodgson biết rằng họ đang đọc ``tác giả của Alice." Thật vậy, có lẽ  phần lớn độc giả của Dodgson đọc sách của ông chính là vì họ biết ông là tác giả của \textit{Alice}. Như vậy, họ thường mong gặp những điều huyền ảo ở những nơi không có nhiều, và khi không có nhiều, đôi khi họ thêm thắt một chút.
+	\vskip 0.1cm
+	Thật là xấu hổ cho nữ hoàng nếu bài viết này kết thúc mà không có một vài lời về cách bà được miêu tả trong \textit{câu chuyện}. Mọi người dễ dàng hiểu được sự ngạc nhiên của bà khi nhận được chuyên luận về định thức của Dodgson, nếu bà quả thựcnhận được cuốn sách, với lý do rằng ``nữ hoàng, giống như phần còn lại của thế giới,  tin rằng ông ấy chỉ đơn thuần là một người hài hước" (McKenna $1895$, tr. $8$). Bà có lẽ cũng sẽ phản ứng tương tự nếu nhận được một chuyên luận về thực vật nhiệt đới hoặc một nghiên cứu về nghệ thuật thời trung cổ, khi tất cả những gì bà mong đợi là một câu chuyện cho trẻ em. Tuy nhiên, sự đặc biệt của \textit{câu chuyện} rõ ràng nảy ra từ định kiến sáo mòn rằng toán học và văn học thuộc về các lĩnh vực tách biệt và không thể dung hòa. Nữ hoàng đã rất ngạc nhiên vì bà mong đợi tác giả là ``một người hài hước", nhưng điều khiến cho sự ngạc nhiên của bà vô cùng thú vị là nếu như bà đã kỳ vọng tác giả là bất kỳ ai khác khác ngoài ``một người hài hước", có lẽ bà sẽ không thể ngờ ông ta là một nhà toán học.
+	\vskip 0.1cm
+	Ngoài sự ngạc nhiên, nhiều phiên bản của \textit{câu chuyện} cho rằng nữ hoàng không hề cảm thấy thích thú. Chúng ta đã thấy một số nhà bình luận phủ nhận câu chuyện với lý do rằng việc tặng một cuốn sách như vậy là vô lễ. Nếu \textit{câu chuyện} quả thực đã xảy ra, những nhà bình luận như vậy cho rằng nữ hoàng sẽ cảm thấy bị xúc phạm. Chúng tôi không biết năng lực toán học của nữ hoàng, nhưng giả sử rằng bà không phải là một người yêu thích toán học, chúng ta vẫn thấy không có lý do gì để bà cảm thấy không hài lòng hoặc không được tôn trọng (mặc dù có thể đã thất vọng). Đầu tiên, chúng ta có thể tưởng tượng rằng nữ hoàng cảm thấy thích thú với sự cố nhỏ này, cũng như cách nó đã khiến nhiều thế hệ độc giả sau này thích thú. Và thứ hai, lời buộc tội  thiếu tôn trọng dường như tận dụng niềm tin rộng rãi rằng toán học là một thứ buồn tẻ, không phù hợp với những nghi thức xã giao, và do đó không thích hợp để làm  một món quà chân thành.
+	\vskip 0.1cm
+	Câu chuyện Dodgson tặng một cuốn sách toán cho nữ hoàng Victoria là một giai thoại kinh điển trong thế giới toán học. Nó bảo chúng ta rằng một tiểu thuyết gia thành công khó có thể là một nhà toán học chuyên nghiệp và các nữ hoàng có lẽ không hứng thú với những cuốn sách toán. Không cần phải xem xét nó một cách quá nghiêm túc. Nhưng  thành công của nó chắc chắn phản ánh những điều cũ rích nhưng còn mãi về toán học là gì, nhà toán học là ai, và sự sáng tạo toán học bắt nguồn từ đâu.
+	\vskip 0.1cm
+	\textbf{\color{quantoan}Tài liệu tham khảo} 
+	\vskip 0.1cm
+	[$1$]	Beale, Tony ($1973$). C. L. Dodgson: mathematician. In Denis Crutch, ed. \textit{Mr. Dodgson}, pp. $26-33$. London: The Lewis Carroll Society.
+	\vskip 0.1cm
+	[$2$]	Bok, Edward ($1920$). \textit{The Americanization of Edward Bok: The Autobiography of a Dutch Boy Fifty Years Later}. New York: Charles Scribner’s sons.
+	\vskip 0.1cm
+	[$3$]	Cohen, Morton N. ($1995$). \textit{Lewis Carroll: A Biography}. New York: Alfred A. Knopf.
+	\vskip 0.1cm
+	[$4$]	Cohen, Morton N., and Roger Lancelyn Green, eds. ($1979$). \textit{The Letters of Lewis Carroll}. New York: Oxford University Press.
+	\vskip 0.1cm
+	[$5$]	Collingwood, Stuart Dodgson ($1898$). \textit{The Life and Letters of Lewis Carroll (Rev. C. L. Dodgson)}. London: T. Fisher Unwin.
+	\vskip 0.1cm
+	[$6$]	Heath, Peter, ed. ($1974$). The Philosopher’s Alice. London: Academy Editions.
+	\vskip 0.1cm
+	[$7$]	Hudson, Derek ($1976$). \textit{Lewis Carroll: An Illustrated Biography}. London: Constable.
+	\vskip 0.1cm
+	[$8$]	Humberstone, Lloyd ($1995$). Names and pseudonyms. \textit{Philosophy} $70$ ($274$), $487-512$.
+	\vskip 0.1cm
+	[$9$]	McKenna, Ethel Mackenzie (August $1895$). The author of ``Alice in Wonderland." \textit{Ladies’ Home Journal} $8$.
+	\vskip 0.1cm
+	[$10$]	Wakeling, Edward, ed. ($1999$). \textit{Lewis Carroll’s Diaries: The Private Journals of Charles Lutwidge Dodgson (Lewis Carroll)}, vol. $5$. The Lewis Carroll Society, Bedfordshire: Luton Press.
+	\vskip 0.1cm
+	[$11$]	Wakeling, Edward, ed. ($2005$). \textit{Lewis Carroll’s Diaries: The Private Journals of Charles Lutwidge Dodgson (Lewis Carroll)}. Vol. $9$, The Lewis Carroll Society, Herefordshire: Clifford Press.
+	\vskip 0.1cm
+	[$12$]	Wakeling, Edward ($2015$). \textit{Lewis Carroll: The Man and His Circle}. London: I. B. Tauris.
+	\vskip 0.1cm
+	[$13$]	Warner Charles Dudley, ed. ($1897$). \textit{A Library of the Wold’s Best Literature: Ancient and Modern}. Vol. $8$. New York: The international Society.
 \end{multicols}

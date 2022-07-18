@@ -2,221 +2,112 @@
 \pagestyle{duongvaotoanhoc}
 \everymath{\color{duongvaotoanhoc}}
 \graphicspath{{../duongvaotoanhoc/pic/}}
-\blfootnote{$^*$\color{duongvaotoanhoc}Nguồn: Math Horizons $02/2015$.}
-\blfootnote{$^1$\color{duongvaotoanhoc}Viện Toán học.}
+%\blfootnote{$^1$\text{.}}
 \begingroup
 \AddToShipoutPicture*{\put(0,616){\includegraphics[width=19.3cm]{../bannerduongvao}}}
-\AddToShipoutPicture*{\put(87,530){\includegraphics[scale=0.98]{../tieude.pdf}}}
+\AddToShipoutPicture*{\put(138,522){\includegraphics[scale=1]{../tieude.pdf}}}
 \centering
 \endgroup
 
-\vspace*{180pt}
+\vspace*{185pt}
 
 \begin{multicols}{2}	
-	Khi minh họa cho các ứng dụng của toán học trong thực tế, thật khó tìm được chủ đề nào tốt hơn môn bi--a. Các đồ vật liên quan rất đơn giản: một cái bàn và một quả bóng \linebreak bi--a (và một cái que cơ để đánh quả bóng đi, nhưng vì nó không đóng vai trò gì sau này, chúng ta sẽ bỏ qua nó). 
+	Đại hội Toán học thế giới (The International Congress of Mathematicians (ICM)) được tổ chức $4$ năm một lần là một sự kiện quan trọng của cộng đồng Toán học. Sau ``chiến dịch tranh cử'' của những nhà toán học Nga đứng đầu là hai Huy chương Fields A.~Okounkov và S.~K.~Smirnov, nước Nga đã giành quyền đăng cai. Nơi tổ chức Đại hội đã được ấn định từ trước là thành phố cổ kính Saint Petersburg từ ngày $6$ đến $14$ tháng $7$ năm $2022$. Tuy nhiên, vì một số yếu tố chính trị liên quan đến cuộc chiến giữa Nga và Ucraina, phiên họp trực tiếp đã không diễn ra, thay vào đó các báo cáo khoa học được để  dưới hình thức trực tuyến. Mặc dù vậy phiên họp Đại hội đồng của Liên đoàn Toán học thế giới nhằm bầu ra những vị trí chủ chốt của Liên đoàn Toán học thế giới nhiệm kỳ tiếp theo vẫn được tiến hành trực tiếp ở thủ đô Helsinki của Phần Lan với sự có mặt của các Chủ tịch hội toán học các nước. Tại phiên họp này các Huy chương Fields đã được trao vào ngày $5$ tháng $7$. Thực tế Helsinki cũng là nơi đăng cai Đại hội Toán học thế giới năm $1978$. Như chúng ta đã biết, ngoài điều kiện không quá $40$ tuổi, tiêu chí của Huy chương Fields là ``trao cho những khám phá xuất sắc trong Toán học đối với những công trình đặc biệt thú vị và hứa hẹn những khám phá tiếp theo''. Kết quả là $4$ Huy chương Fields năm $2022$ đã được trao cho các nhà toán học tài năng sau đây (lần lượt theo vần chữ cái): 
 	\vskip 0.1cm
-	Từ quan điểm của một nhà toán học, chỉ có hai nguyên tắc vật lý cơ bản: Quả bóng di chuyển theo một đường thẳng cho đến khi nó chạm vào cạnh bàn, tại đó, chỉ nó tuân theo quy tắc rằng góc tới bằng góc phản xạ. Không cần phải bận tâm tới ma sát, độ quay, hoặc các vấn đề rắc rối khác.
-	\vskip 0.1cm
-	Thực hiện quá trình đơn giản hóa này đến mức tối giản, chúng ta coi bàn bi--a như một đa giác trong mặt phẳng và quả bóng là một điểm chuyển động theo các quy tắc đã nêu trên. Đường đi của bóng được gọi là \emph{đường đi bi--a}. 
-	\vskip 0.1cm
-	Trong khi một người chơi bi--a muốn biết làm sao đưa được bóng đến một vị trí cụ thể trên bàn thì nhà toán học đặt câu hỏi: Nếu chúng ta đánh quả bóng theo một hướng cho trước, đâu là những nơi mà một lúc nào đó quả bóng sẽ đi qua? Trong bối cảnh này, \linebreak bi--a là một \emph{hệ động lực}. Vị trí và hướng đi của quả bóng thay đổi theo thời gian, và chúng ta quan tâm đến dáng điệu dài hạn trong chuyển động của nó.
-	\vskip 0.1cm
-	Để đơn giản hóa cuộc thảo luận, chúng ta sẽ tập trung vào câu hỏi về những đường  bi--a nào là \emph{tuần hoàn}: Tức là, vị trí và hướng đi ban đầu của quả bóng bi--a như thế nào để khiến nó quay trở lại vị trí ban đầu, theo cùng một hướng như khi xuất phát, và cứ mãi lặp lại cùng một đường đi như vậy?
-	\vskip 0.1cm
-	Có lẽ sẽ không có gì ngạc nhiên khi câu trả lời cho câu hỏi này phụ thuộc vào vị trí và hướng chuyển động ban đầu của quả bóng. Cũng không có gì ngạc nhiên khi câu trả lời phụ thuộc vào hình dạng của cái bàn bi--a. Chúng ta sẽ bắt đầu với bàn bi--a có hình dạng quen thuộc nhất, hình chữ nhật, sau đó là đến hình tam giác.
-	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Bàn bi--a chữ nhật}
-	\vskip 0.1cm
-	Bi--a thông thường được chơi trên bàn hình chữ nhật. Bàn kích thước tiêu chuẩn có tỷ lệ độ dài cạnh là $2:1$, nhưng ở đây chúng ta cho phép bàn có kích thước $a\times b$ bất kỳ. Trên một bàn bất kỳ như vậy, luôn có một số đường đi tuần hoàn hiển nhiên:
-	chẳng hạn như, một quả bóng nảy qua lại giữa hai cạnh đối diện nhau và vuông góc với chúng.
-	\vskip 0.1cm
-	Mày mò một chút, chúng ta tìm được các đường đi tuần hoàn khác: hình thoi nối trung điểm của các cạnh bàn, hay chẳng hạn như đường đi dích dắc chạm vào một cặp cạnh mỗi bên ba lần, và cặp còn lại mỗi bên hai lần như trong Hình $1$. Có điều gì chung cho những
-	đường đi này mà chúng ta có thể tổng quát lên để tìm tất cả các đường đi tuần hoàn?
-	\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{1}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $1$. Một đường đi bi--a tuần hoàn trong hình chữ nhật.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Bất kỳ đường đi bi--a nào quay trở lại vị trí và hướng đi ban đầu của nó phải đi theo phương ngang của hình chữ nhật một số chẵn lần, giả sử là $2N$ (lý do là vì quả bóng đổi hướng chuyển động  từ trái sang phải, hoặc phải sang trái, mỗi khi nó nảy tại một trong các cạnh thẳng đứng của bàn). Tương tự như vậy, nó phải đi theo phương dọc của hình chữ nhật một số chẵn lần, giả sử là $2M$. Cho trước một cặp số nguyên chẵn không âm tùy ý $(2N, 2M)$, liệu chúng ta có thể tìm được một đường đi tuần hoàn với số lần đi như vậy?
-	\vskip 0.1cm
-	Hãy thực hiện cách tiếp cận ``qua gương" để tìm một đường đi như vậy. Hãy coi đường đi bi--a như một tia sáng. Thay vì lấy mỗi cạnh của hình chữ nhật là một tấm gương, hãy coi nó như một tấm kính, và khi đến đó, tia sáng tiếp tục đi theo một đường thẳng xuyên vào một bản sao đối xứng của hình chữ nhật ban đầu.  Đường đi cứ tiếp tục và sau đó đến một cạnh khác của bản sao này, khi đó chúng ta lại tạo một bản sao khác của hình chữ nhật để tiếp tục đi theo một đường thẳng.
-	\vskip 0.1cm
-	Mỗi bản sao đại diện cho bàn bi--a gốc, nhưng mang theo thông tin về số lần một  đường đi bị phản xạ tại mỗi cạnh (tức là đã đi qua gương). Trong Hình $2$ thông tin này được mã hóa bằng cách tô màu các cạnh của hình chữ nhật. Quá trình này được gọi là \emph{trải} một đường đi bi--a ra.
-	\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{2}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $2$. Đường đi bi--a (liền nét)
-		có thể được xem như một đường thẳng (đứt nét) trong mặt phẳng bằng cách liên tiếp lấy đối xứng bàn bi--a qua các cạnh của nó.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Hình chữ nhật là một đa giác đẹp bởi vì  bằng cách liên tiếp lấy đối xứng nó qua các cạnh, chúng ta có thể lát kín toàn bộ mặt phẳng. Nếu chúng ta làm điều này ngay từ đầu,
-	thì mỗi đường thẳng trong mặt phẳng tương ứng với một đường đi bi--a trong hình chữ nhật (xem Hình $3$).
-	\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{3}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $3$. Mặt phẳng được lát bằng bàn bi--a hình chữ nhật. Mỗi đường thẳng
-		trong mặt phẳng tương ứng với một đường đi bi--a trên bàn.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Cho cặp số $(2N, 2M)$, chúng ta có thể tìm thấy một đường đi bi--a phản xạ theo cạnh ngang $2N$ lần và theo cạnh dọc $2M$ lần bằng cách vẽ một đường thẳng từ một điểm trong hình chữ nhật ban đầu đến điểm tương ứng trong hình chữ nhật mới nằm cách đó $2N$ bản sao theo chiều ngang và $2M$ bản sao theo chiều dọc. Như vậy ta đã tìm thấy mối quan hệ giữa các đường đi bi--a tuần hoàn và các cặp số nguyên không âm $(2N, 2M)$, chúng ta có định lý sau.
-	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Định lý.} Cho $R$ là một hình chữ nhật kích thước $a\times b$. Một đường đi bi--a trong $R$ là tuần hoàn khi và chỉ khi hệ số góc ban đầu của nó là một bội hữu tỷ của  $\frac{b}{a}.$
-	\vskip 0.1cm
-	Lưu ý rằng vị trí bắt đầu không đóng vai trò gì trong định lý này, vì vậy mỗi đường đi tuần hoàn thuộc một họ các đường đi tuần hoàn có cùng hệ số góc ban đầu.
-	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Bàn bi--a Tam giác}
-	\vskip 0.1cm
-	Trong trường hợp hình chữ nhật, chúng ta có hai tham số, $a$ và $b,$ để mô tả hình dạng của nó; sau khi suy xét, chúng ta nhận ra rằng chỉ \emph{lớp đồng dạng} của hình quyết định
-	đường đi của bi--a. Điều này cho phép mô tả họ các hình chữ nhật bằng  một tham số duy nhất:
-	tỉ số giữa $a$ và $b.$
-	\vskip 0.1cm
-	Trong trường hợp bàn tam giác, chúng ta có thể lấy ba số dương $a, b$ và $c$ bất kỳ thỏa mãn $a+b+c=180$ và tạo một tam giác với các góc bằng $a, b$ và $c$ (theo độ), với lớp đồng dạng được xác định duy nhất.
-	Phương trình liên hệ giữa $a, b,$ và $c$ ngụ ý rằng chúng ta có một không gian hai tham số của các hình tam giác. 
-	\vskip 0.1cm
-	Trái ngược hoàn toàn với trường hợp hình chữ nhật, câu hỏi về những đường đi bi--a tuần hoàn nào  một tam giác cho trước có thể có (thậm chí ngay cả liệu nó có một đường nào hay không!) vẫn còn mở và là một lĩnh vực nghiên cứu sôi động. Chính xác hơn, chúng ta biết tất cả đường đi bi--a tuần hoàn cho một số loại tam giác. Đối với một số loại tam giác khác, chúng ta chỉ biết rằng tồn tại một  đường đi bi--a tuần hoàn. Nhưng đối với rất nhiều tam giác  khác, \emph{chúng ta không biết liệu có một đường đi bi--a tuần hoàn hay không!}
-	\vskip 0.1cm
-	Đừng thất vọng: với những hình tam giác quen thuộc nhất ở trường phổ thông--tam giác đều, tam giác $30-60-90$ và tam giác $45-45-90$, câu trả lời được biết rõ.
-	\vskip 0.1cm
-	Hãy thử chiến thuật mà chúng ta đã sử dụng với các hình chữ nhật, lấy đối xứng hình tam giác qua các cạnh của nó thay vì phản xạ  đường đi bi--a. Cũng thuận tiện giống như hình chữ nhật, ba hình tam giác này lát kín mặt phẳng như trong Hình $4$.  Các cạnh cùng màu tương ứng với cùng một cạnh của bàn bi--a. 
-	\vskip 0.1cm
-	Theo đúng cách mà chúng ta đã tìm thấy các đường đi bi--a tuần hoàn trong hình chữ nhật, chúng ta có thể nối các điểm tương ứng trong hai bản sao khác nhau của một tam giác trong phép lát để xây dựng các đường đi tuần hoàn. Bài tập: Đối với mỗi tam giác này, hãy xây dựng một định lý phân loại các đường đi bi--a tuần hoàn tương tự như định lý ở mục trước.
+	$\bullet$ Hugo Duminil--Copin: Anh sinh năm $1985$ tại Pháp, là giáo sư tại Đại học Geneva, Thụy Sĩ, đồng thời cũng là giáo sư của Viện nghiên cứu cao cấp về Khoa học tự nhiên (Institut des Hautes Études Scientifiques--IHES), Cộng hòa Pháp . Anh được trao Huy chương Fields vì đã ``đã giải quyết những giả thuyết đã có từ lâu trong lý thuyết xác suất của hiện tượng chuyển pha trong Vật lý thống kê, đặc biệt là với số chiều $3$ và chiều~$4$".
+	\vskip 0.1cm 
+	$\bullet$ June Huh: Anh sinh năm $1983$ tại Mỹ, nhưng là người Hàn Quốc và lớn lên cũng tại Hàn Quốc. Hiện anh là giáo sư tại Đại học Princeton, Hoa Kỳ. Anh nhận được Huy chương Fields vì ``việc mang những ý tưởng của lý thuyết Hodge vào tổ hợp, vì chứng minh giả thuyết Dowling--Wilson về các dàn hình học, chứng minh giả thuyết Heron--Rota--Welsh cho các matroids, và phát triển lý thuyết về các đa thức Lorentz, cùng với việc chứng minh giả thuyết Mason dạng mạnh".
+	\vskip 0.1cm	
+	$\bullet$ James Maynard: Anh sinh năm $1987$ tại Vương Quốc Anh, là giáo sư tại Đại học Oxford. Huy chương Fields của J. Maynard
 	\end{multicols}
-	\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{4}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $4$. Lát mặt phẳng bằng cách lấy đối xứng các tam giác đều, tam giác $45-45-90$ và tam giác $30-60-90$ qua các cạnh.}}
-		\vspace*{-10pt}
-	\end{figure}
-	\begin{multicols}{2}
-	Bây giờ, hãy giăng lưới của chúng ta rộng hơn ba loại tam giác đặc biệt này. Một trong những lớp đường đi bi--a tuần hoàn lâu đời nhất trong hình tam giác được Giovanni Fagnano tìm ra vào năm $1775$. Ông đã chứng minh rằng mọi tam giác \emph{nhọn} $T$ đều có một đường đi bi--a tuần hoàn. (Thật ra, khi đó ông  đang tìm kiếm  đường đi khép kín ngắn nhất chạm vào tất cả các cạnh, không nhất thiết phải tuân theo quy tắc phản xạ của bi--a, nhưng trong trường hợp này  đường đi ngắn nhất cũng chính là một  đường đi bi--a).
+	\begin{multicols}{2} 
+	được trao cho việc đã có ``những đóng góp trong Lý thuyết số giải tích, dẫn đến những tiến bộ chính trong việc hiểu cấu trúc các số nguyên tố và trong xấp xỉ Diophantine". 
 	\vskip 0.1cm
-	Có thể xây dựng đường đi Fagnano một cách sơ cấp: Nối chân của ba đường cao trong tam giác (xem Hình $5$). Bài tập: chứng minh rằng
-	tam giác này--được gọi là \emph{tam giác trực tâm} của $T$-- tạo thành một đường đi bi--a; tức là, chứng minh rằng mỗi cặp cạnh của
-	tam giác trực tâm tạo với cạnh của $T$ các góc bằng nhau. Tại sao $T$ phải nhọn?
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 0.95\linewidth]{5}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $5$. Trong mọi tam giác nhọn, tam giác trực tâm tạo thành một đường đi bi--a tuần hoàn.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Từ đường đi tuần hoàn này, chúng ta nhận được thêm các đường đi tuần hoàn khác. Chỉ cần trải đường Fagnano ra. Bởi vì nó tuần hoàn, cuối cùng nó sẽ đến điểm tương ứng với vị trí xuất phát trong một bản sao có cùng hướng với tam giác $T$ ban đầu. Bất kỳ đường đi nào song song với đường đi ban đầu và nằm trong cùng một chuỗi  
-	bản sao các tam giác chứa đường đi ban đầu cũng tuần hoàn. Xem Hình $6$ để thấy việc xây dựng này.
+	$\bullet$ Maryna Viazovska: Chị sinh năm $1984$ tại Ucraina, là giáo sư đặc biệt (lãnh đạo nhóm Lý thuyết số) tại Đại học Bách Khoa Lausanne (EPFL), Thụy Sĩ. Chị được Huy chương Fields vì ``đã chứng minh được dàn $E_{8}$ cung cấp cách sắp xếp các hình cầu giống nhau một cách dày đặc nhất trong không không gian $8$ chiều, và những ứng dụng khác cho bài toán cực trị trong giải tích Fourier".
 	\vskip 0.1cm
-	Trong $30$ năm qua, đã có nhiều tiến bộ trong việc tìm kiếm các đường đi bi--a tuần hoàn trong tam giác. Đây là hai định lý minh họa cho những gì đã biết.
-	\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{6}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $6$. Đường Fagnano màu đen, các đường màu tím, màu vàng song song với nó là các đường tuần hoàn mới.}}
-		\vspace*{-10pt}
-	\end{figure}
-	{\bf\color{duongvaotoanhoc} Định lý} $\pmb{2.}$ Nếu số đo (theo độ) của tất cả các góc trong một tam giác đều là  số hữu tỷ thì tam giác đó có đường đi bi--a tuần hoàn theo vô số hướng.
+	Sau đây là một vài điểm chi tiết hơn một chút về công trình cũng như một vài thông tin khác của những nhà toán học nói trên. 
 	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc} Định lý} $\pmb{3.}$ Mọi tam giác có các góc đều nhỏ hơn $100^{\circ}$ có một đường đi bi--a tuần hoàn.
+	$1.$ Hugo Duminil--Copin: Anh được xem là đã làm thay đổi nền tảng toán học của hiện tượng chuyển pha trong Vật lý thống kê và đã giải quyết một số vấn đề mở đã có từ lâu trong Lý thuyết này, nói riêng trong trường hợp chiều $3$, chiều $4$ và trường hợp không khả tích khi số chiều bằng $2$. Chuyển pha là là một thuật ngữ mô tả sự chuyển tiếp các trạng thái của vật chất như rắn, lỏng, khí, plasma (ví dụ khi đun sôi đến $100$ độ C, dưới áp suất thông thường thì nước bắt đầu bay hơi). Mô hình Vật lý để mô tả những hiện tượng này là mô hình của E. Ising (một nhà Vật lý người Đức) trong Vật lý thống kê. Số chiều $2,3,4$ nói ở trên là số chiều của mô hình Ising. Công việc của Hugo Duminil--Copin là sự tiếp nối từ công việc của người thầy hướng dẫn của anh, Stanislav Smirnov (Huy chương Fields năm $2010$ về những đóng góp trong trường hợp số chiều $2$), cho những nền tảng toán học chặt chẽ để giải thích cho hiện tượng chuyển pha trong Vật lý nói trên thông qua mô hình Ising. Thực ra kết quả Toán học quan trọng đầu tiên về những mô hình Ising đã được L. Onsager (nhà bác học được giải Nobel về Hóa học năm $1968$) tìm ra. 
 	\vskip 0.1cm
-	Cách chứng minh của hai định lý này hoàn toàn khác nhau. Định lý đầu tiên sử dụng các công cụ tiên tiến của giải tích phức  và tô-pô. Định lý thứ hai sử dụng tổ hợp, giải tích thực sơ cấp và cần sự hỗ trợ của máy tính.
+	Cần nói thêm rằng ngay từ khi làm luận án Tiến sĩ, Hugo đã có công trình quan trọng với thầy của mình giải quyết giả thuyết Nienhuis trong Vật lý thống kê về những hằng số liên kết cho những dàn lục giác. Chính kết quả này cũng đã góp phần tạo nên Huy chương Fields năm $2010$ của Stanislav Smirnov. Sau khi bảo vệ luận án Tiến sĩ năm $2013$, anh đã nhanh chóng trở thành chuyên gia hàng đầu về các khía cạnh xác suất của mô hình Ising. Bên cạnh mô hình Ising, Hugo còn có nhiều đóng góp cho mô hình Potts cũng trong Vật lý thống kê. Ở đây anh cùng với các cộng sự cũng đã giải quyết được một giả thuyết của Baxter đưa ra từ những năm $1970$. Vì những kết quả xuất sắc kể trên, khi chỉ ở độ tuổi $30$ anh đã là Giáo sư ĐH Geneve (Thụy Sĩ) và là Giáo sư ở Viện nghiên cứu cao cấp (Institut des Hautes Études Scientifiques (IHÉS)), Cộng hòa Pháp. Trước khi được trao Huy chương Fields, anh đã nhận được nhiều giải thưởng quan trọng như Giải thưởng của Hội Toán học Châu Âu, Giải thưởng của Viện hàn lâm khoa học Pháp, và một số giải thưởng của chuyên ngành Xác suất như giải thưởng Loeve, Dobrushin, ...  
 	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Điều gì tiếp theo?}
+	$2.$ James Maynard: Các công việc của anh được xem có tính độc đáo rất cao, thường dẫn đến những kết quả có tính đột phá đáng ngạc nhiên cho những vấn đề quan trọng, tưởng chừng như không thể thực hiện được với những kỹ thuật hiện tại.  
 	\vskip 0.1cm
-	Để đơn giản hóa vấn đề, chúng ta chỉ xét câu hỏi đường đi bi--a nào là tuần hoàn. Việc phân loại tính chất của các đường đi không tuần hoàn đòi hỏi phải đưa ra một loạt các khái niệm từ tô--pô và lý thuyết ergodic.
+	Anh là một nhà Toán học người Anh, và được phong giáo sư ở Đại học Oxford danh tiếng vào năm $2017$ khi mới vừa tròn $30$ tuổi. Trước đó, anh làm dưới sự hướng dẫn của một trong những chuyên gia đầu ngành về Lý thuyết số giải tích là Roger Heath--Brown. Trước khi được trao Huy chương Fields, anh đã dành được một số giải thưởng quan trọng khác như giải thưởng SASTRA Ramanujan năm $2014$, giải thưởng Whitehead cho các nhà toán học trẻ của Hội Toán học London năm $2015$, giải thưởng của Hội toán học Châu Âu năm $2016$.    
 	\vskip 0.1cm
-	Hơn nữa, chúng ta cũng mới chỉ xem xét hai hình dạng của bàn bi--a. Trường hợp bàn \linebreak bi--a hình đa giác tổng quát, đặc biệt là khi các
-	góc có số đo hữu tỷ, cũng đang được nghiên cứu mạnh mẽ như trường hợp tam giác. Đây vẫn là một lĩnh vực nghiên cứu sôi động,
-	với kho tàng kỹ thuật được sử dụng ngày càng gia tăng, được đúc kết từ nhiều chủ đề toán học khác nhau.
+	Như đã biết số nguyên tố là một lĩnh vực cổ điển của Lý thuyết số mà không nhiều người dám thử sức vì khả năng có kết quả tương đối thấp. Ngoại trừ kết quả về vô hạn số nguyên tố có từ thời Eulid, mà chứng minh của nó chỉ vài dòng được giới thiệu trong chương trình cấp hai, thì các kết quả được xem là định lý về số nguyên tố đều có các chứng minh ít nhiều cần đến kiến thức ở bậc đại học trở lên và rất khó. Ở góc nhìn tổng thể về phân bố số nguyên tố, một trong những kết quả quan trọng mở đầu cho những ứng dụng của giải tích trong số nguyên tố là định lý của J. Hadamard và de vallee Poussin năm $1896$ (được dự đoán từ hàng trăm năm trước đó bởi A--M. Legendre):
 	\vskip 0.1cm
-	Một số người đoạt huy chương Fields đã có những đóng góp mới và quan trọng trong việc nghiên cứu bi--a đa giác, bao gồm hai trong số những người nhận giải năm $2014$, Artur Avila (Người Brazil đầu tiên đoạt giải) và Maryam Mirzakhani (người phụ nữ đầu tiên và người Iran đầu tiên đoạt giải).
+	\textbf{\color{duongvaotoanhoc}Định lý} $\pmb{1.}$ \textit{Với $\pi(n)$ là số lượng các số nguyên tố nhỏ hơn hay bằng $n$ thì} 
+	\begin{align*}
+		\lim_{n \to \infty} \frac{\pi(n)}{{\rm ln}n}=1.
+	\end{align*}
+	Liên quan đến phân bố số nguyên tố thì dự đoán lớn nhất còn tồn tại có lẽ là giả thuyết Riemann về không điểm của hàm zeta. Bên cạnh đó, một mặt với số $n$ lớn tùy ý luôn tồn tại một dãy $n$ số liên tiếp gồm toàn hợp số (chẳng hạn $(n+1)!+2, (n+1)!+3, \ldots, (n+1)!+(n+1)$), nhưng {\it có thể có} những cặp số nguyên tố sinh đôi $(p,p+2)$ lớn tùy ý, chẳng hạn $(518807,518809)$. Đó chính là nội dung của câu hỏi về cặp số nguyên tố sinh đôi vẫn còn mở: 
 	\vskip 0.1cm
-	Bi--a trong bàn có biên là đường cong (được gọi là bi--a trơn) tạo ra một màu sắc khác biệt; hình tròn và hình elip có các tính chất đẹp tương tự của hình chữ nhật. Để biết chi tiết về những điều này và những hệ bi--a trơn phức tạp hơn, độc giả có thể xem trong [$1$] và~[$4$].
+	\textbf{\color{duongvaotoanhoc}Câu hỏi} $\pmb{1.}$
+		Tồn tại vô hạn cặp số nguyên tố sinh đôi $(p,p+2)$?
 	\vskip 0.1cm
-	Mặc dù bi--a bắt đầu với những giả thiết đơn giản, nhưng nó đã phát triển thành một lý thuyết phong phú rút ra từ các lĩnh vực toán học dường như khác nhau. Đây thường là dấu hiệu của nghiên cứu toán học mới: Nó khám phá ra những mối liên hệ đáng kinh ngạc giữa các lĩnh vực khác nhau và sử dụng những mối liên hệ này để nhận được các kết quả mạnh mẽ về các đối tượng và quá trình đơn giản.
+	Năm $2006$, một kết quả quan trọng theo hướng khẳng định giả thuyết về các cặp số nguyên tố sinh đôi của Goldston--Graham--Pintz--Yıldırım đã chỉ ra 
 	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc} Bi--a: Những khám phá toán học}
+	\textbf{\color{duongvaotoanhoc}Định lý} $\pmb{2.}$ (Goldston--Graham--Pintz--Yıldırım, Proc. Japan Academy $2006$).
+	\textit{Ký hiệu $p_{n}$ là số nguyên tố thứ $n$ thì}
+	\begin{align*}
+		\liminf  \frac{p_{n+1}-p_{n}}{{\rm log}p_{n}}=0.
+	\end{align*}
+	Sau đó, năm $2013$ có một bước tiến rất ấn tượng của Y. Zhang như sau.
 	\vskip 0.1cm
-	Hai trong số bốn người nhận Huy chương Fields năm $2014$ đã có đóng góp đáng kể vào việc nghiên cứu bi--a đa giác. Ở đây chúng ta đưa ra những bản phác thảo ngắn gọn về công việc của họ trong lĩnh vực này. Trong cả hai trường hợp, nó sẽ giúp ta hiểu được mối liên hệ giữa bi--a đa giác và một đối tượng toán học được gọi là một \emph{mặt cong phẳng}.
+	\textbf{\color{duongvaotoanhoc}Định lý} $\pmb{3.}$ (Y. Zhang, Ann. Math. $179$ ($2014$), $1121$--$1174$).
+	\textit{Với một số $N$ nào đó nhỏ hơn $70$ triệu, tồn tại vô hạn cặp số nguyên tố sai khác $N$. }
 	\vskip 0.1cm
-	Từ đây trở đi, chúng ta đưa thêm một giả thiết rằng trong bàn bi--a đa giác của chúng ta tất cả các góc đều có số đo theo độ hữu tỷ. Chúng ta xây dựng mặt cong phẳng
-	từ đa giác bằng cách sử dụng quá trình trải ra được mô tả trong mục trước: ta dán từng bản sao nhận được bằng cách lấy đối xứng đa giác vào bản sao trước đó. Khi tất cả
-	các góc có số đo hữu tỷ, quá trình trải ra chỉ tạo ra được các bản sao quay đi theo một số hữu hạn các hướng khác nhau. Khi một bản sao của đa giác có cùng hướng với bản sao đã tạo ra,  chúng ta dán chúng với nhau. Ta làm như vậy với tất cả các cạnh của tất cả các bản sao đa~giác.
+	Cũng cần phải nói thêm Y. Zhang lúc đó chỉ là một giảng viên Toán bình thường ở Đại học New Hampshire. Đây không hẳn là một đại học nghiên cứu (có đào tạo bậc Tiến sĩ về Toán), ở vùng Đông Bắc nước Mỹ. Sở dĩ ông công tác ở một đại học nhỏ như vậy vì kết quả chính trong luận án Tiến sĩ của mình tuy được công bố ở một tạp chí uy tín cao là Duke Math. J. nhưng đã sử dụng một kết quả mà sau này người ta mới biết là sai. Tuy kết quả năm $2014$ của Y. Zhang rất ấn tượng nhưng sau đó đã được làm mạnh hơn rất nhiều bởi James Maynard và nhóm của T. Tao (một nhà toán học rất nổi tiếng, Huy chương Fields năm $2006$) và các cộng sự. Điển hình là kết quả sau giảm số $70$ triệu của định lý trước của Y. Zhang xuống còn $600$:
 	\vskip 0.1cm
-	Bằng cách này, chúng ta nhận được một mặt trừu tượng trông giống như mặt phẳng Euclid ở hầu hết các điểm (trừ những đỉnh của các đa giác). Đường đi bi--a trong
-	đa giác trở thành các đường ``thẳng" trên mặt cong phẳng, và ngược lại. Hơn nữa, một đường đi bi--a tuần hoàn trong đa giác tương ứng với một vòng khép kín, đi thẳng trên
-	mặt cong phẳng.
-	\begin{figure}[H]
-		\vspace*{-10pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{7}
-		\caption{\small\textit{\color{duongvaotoanhoc}Hình $7$. Trải tam giác $T$ ra thành một hình bát giác đều. Mỗi cặp cạnh có cùng tên được dán lại với nhau để tạo  một mặt cong phẳng có cấu trúc tô-pô như một hình xuyến có hai quai.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Chúng ta hãy xét ví dụ một tam giác vuông $T$ với một bằng góc $22,5^{\circ}$ (xem hình $7$). Trải nó ra để nhận được một hình bát giác đều. Khi lấy đối xứng bất kỳ bản sao nào trong số $16$ bản sao này, chúng ta sẽ lại nhận được một trong số chúng. Ví dụ, nếu lấy đối xứng tam giác $T$ qua cạnh màu đỏ của nó, chúng ta nhận được tam giác $T'.$ Vì vậy, chúng ta nhận được một mặt cong phẳng bằng cách dán các cạnh $A$ với $A$, $B$ với $B$, $C$ với $C$, và $D$ với $D.$
+	\textbf{\color{duongvaotoanhoc}Định lý} $\pmb{4.}$ (James Maynard, Ann. Math. ($2015$), vol. $181$ (no.$1$) $383$--$413$, nhóm của T. Tao cũng cho một chứng minh độc lập).
+	\textit{Ký hiệu $p_{n}$ là số nguyên tố thứ $n$ thì}
+	\begin{align*}
+		\liminf (p_{n+1}-p_{n}) \leq 600. 
+	\end{align*}
+	\textit{Nếu thừa nhận giả thuyết Elliot--Halberstam thì} 
+	\begin{align*}
+		\liminf (p_{n+1}-p_{n}) \leq 12,
+	\end{align*}
+	\textit{và}
+	\begin{align*}
+		\liminf(p_{n+2}-p_{n}) \leq 600. 
+	\end{align*}
+	Phương pháp mà James Maynard sử dụng phát triển phương pháp ``sàng'' của nhóm tác giả D. A. Goldston, J. Pintz, C. Y. Yildirim (Ann. Math. $2009$). Gốc rễ của phương pháp này chính là sàng Eratosthenes có từ thời cổ đại dùng để lọc ra các số nguyên tố nhỏ hơn một số cho trước. Ngoài kết quả có tính đột phá kể trên, J. Maynard cũng đã có những đóng góp cơ bản trong xấp xỉ Diophantine, cùng với Koukoulopoulos anh đã giải quyết Giả thuyết Duffin--Schaeffer (Ann. Math $2020$). Giả thuyết này được đưa ra năm $1941$, mô tả việc một số thực có thể được xấp xỉ tốt bởi một số hữu tỷ đến mức độ nào, và bắt nguồn từ bổ đề xấp xỉ nổi tiếng của Dirichlet. 
 	\vskip 0.1cm
-	Về mặt trực quan, điều này có nghĩa là một đường đi ``rời khỏi" bát giác ở một cạnh bên sẽ đi vào điểm tương ứng trên cạnh cùng tên của chính mặt đó. Bài tập: thuyết phục bản thân rằng mặt cong phẳng này tương đương tô-pô với hình xuyến hai quai. Đây là một phiên bản phức tạp hơn của hình xuyến một quai quen thuộc thu được từ việc dán các cạnh đối diện của một hình vuông.
+	$3.$ June Huh: Anh được xem là đã cùng với một số cộng sự làm thay đổi lĩnh vực hình học tổ hợp thông qua việc dùng các phương pháp của lý thuyết Hodge (phương pháp để nghiên cứu đối đồng điều của những đa tạp Kahler compact), hình học nhiệt đới (tropical), và lý thuyết kỳ dị. Đối tượng tổ hợp chính mà June Huh quan tâm là các matroids. Matroid là một đối tượng gần với ma trận (matrix) và lý thuyết đồ thị, và lý thuyết về chúng có cảm hứng từ việc trừu tượng hóa nhiều khái niệm từ hai lý thuyết nói trên. Cụ thể hơn, matroid $M$ là một cặp $(E,\pazocal{I})$ gồm một tập hữu hạn $E$ và một họ $\pazocal{I}$ khác rỗng các tập con của $E$ thỏa mãn đồng thời $2$ điều kiện:
 	\vskip 0.1cm
-	Các mặt cong phẳng khác có thể thu được từ các đa giác bằng cách dán các cạnh song song mà ta chọn lại với nhau, không nhất thiết phải theo một quá trình lấy đối xứng. Ví dụ, chúng ta có thể đơn giản là bắt đầu ngay với hình bát giác trong Hình $7$, chứ không cần trải tam giác ra. Tập hợp tất cả các mặt cong phẳng có một khái niệm tự nhiên về sự gần--xa: Hai mặt cong là \emph{gần nhau} nếu chúng được xây dựng từ các hình đa giác mà chỉ cần một biến dạng nhỏ là có thể biến đổi từ hình này thành hình kia.
+	$\bullet$ Nếu tập con $A$ của $E$ thuộc họ $\pazocal{I}$ thì mọi tập con của nó cũng thuộc $\pazocal{I}$.
 	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Artur Avila}
+	$\bullet$ Nếu $A, B \in \pazocal{I}$ và $|A| = |B| +1$, thì tồn tại một phần tử $x \in A \setminus B$ sao cho $B \cup \{x\} \in \pazocal{I}$.
 	\vskip 0.1cm
-	Công việc mà Artur Avila theo đuổi thường tìm cách mô tả dáng điệu \emph{điển hình} trong các hệ động lực--nghĩa là, trả lời câu hỏi về điều gì sẽ xảy ra ``trong hầu hết toàn bộ thời gian." Các đường đi tuần hoàn trong bàn bi--a là cực kỳ \emph{không điển hình}, giống như việc các số hữu tỷ là không điển hình trong tập số thực. Hầu hết các đường đi bi--a theo thời gian sẽ đến gần mọi điểm trên bàn, một khoảng cách nhỏ tùy ý (theo thuật ngữ tô-pô, hầu hết các đường đi là \emph{trù mật} trên bàn).
-	Đây chỉ là một phần của kết quả; chúng ta cũng có thể đặt câu hỏi đường đi bao phủ bàn bi--a nhanh như thế nào. Câu trả lời cho những câu hỏi như vậy có thể phát biểu dễ dàng hơn trên mặt con phẳng tương ứng.
+	Mô hình cụ thể của một matroid là một ma trận với các cột đánh số bởi tập $E$ và họ $\pazocal{I}$ các tập con mà các cột ứng với tập con đó là độc lập tuyến tính.
 	\vskip 0.1cm
-	Avila chứng minh, trong công trình chung với Giovanni Forni, với hầu hết các mặt cong phẳng, chuyển động theo đường thẳng là \emph{trộn yếu}. Có thể hình dung tính chất này như sau: Giả sử một vùng $P$ bao phủ $p\%$ của mặt cong và tất cả các điểm trong $P$ bắt đầu di chuyển theo cùng một hướng. Khi đó, với hầu hết mọi hướng ban đầu và bất kỳ vùng $R$ nào, đến một lúc nào đó, tính trung bình,  các điểm xuất phát từ $P$ sẽ bao phủ $p\%$ của $R.$ Do đó, một quả bóng sẽ được phân tán đều khắp trên mặt cong, ngay cả khi  ban đầu nó chỉ tập trung ở
-	một vùng. Tuy nhiên, các mặt cong  phẳng xuất phát từ bi--a là không điển hình, và vì vậy kết quả nói trên không cho hệ quả trực tiếp nào liên quan đến bi--a.
-	\begin{figure}[H]
-		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 0.85\linewidth]{8}
-		\vspace*{-10pt}
-	\end{figure}
-	Tuy nhiên, bàn bi--a cho phép xây dựng hiển các mặt cong có tính chất trộn yếu. Như Avila thể hiện trong công trình sau đó, với Vincent Delecroix, tính trộn yếu không chỉ đúng đối với các  mặt cong điển hình, mà còn đúng với các trường hợp cụ thể của các mặt cong nhận được từ đa giác đều (như trong Hình $7$), ngoại trừ hình tam giác, hình vuông,
-	hoặc hình lục giác.
+	Đây là một khái niệm đưa ra bởi một nhà hình học nổi tiếng của thế kỷ trước là H. Whitney sau đó được phát triển nhiều bởi một chuyên gia nổi tiếng về tổ hợp là G--C. Rota. Sau này matroids tìm thấy nhiều ứng dụng trong hình học, tôpô, tổ hợp, ...
 	\vskip 0.1cm
-	Cuối cùng, Avila, cùng với Marcelo Viana, chứng tỏ rằng trên một mặt cong phẳng điển hình, độ lệch của một đường thẳng điển hình so với dáng điệu tiệm cận khi uốn lượn quanh bề mặt của nó  có thể được mô tả một cách chính xác (điều gọi là \emph{hiện tượng Zorich}). 
+	Bên cạnh đó, hình học nhiệt đới (tropical) là một biến thể của hình học đại số. Trong khi hình học đại số nghiên cứu những đa tạp đại số là tập nghiệm của một hệ phương trình đa thức thì hình học nhiệt đới thay phép cộng trong đa thức bởi phép lấy giá trị nhỏ nhất và phép nhân thay bằng phép cộng. Ngay trong hình học đại số, lý thuyết hình học mới này đã có nhiều ứng dụng thông qua các công trình của M. Kontsevich (Huy chương Fields năm $1998$) và G. Mikhalkin. Tuy xuất phát từ hình học đại số nhưng theo nhận xét của June Huh các đa tạp nhiệt đới rộng hơn nhiều so với việc lấy nhiệt đới hóa (tropicalization) các đa tạp đại số, qua đó cho thấy những nghiên cứu của June Huh chắc sẽ còn hứa hẹn nhiều kết quả quan trọng.  
 	\vskip 0.1cm
-	Các chi tiết khác về công việc của Avila về các mặt cong phẳng có thể được tìm thấy trong bài báo của Forni ``Về công trình đoạt giải Brin của
-	Artur Avila trong Động lực học Teichmüller và các phép trao đổi đoạn thẳng", được xuất bản trên Tạp chí Động lực học Hiện đại (Journal
-	of Modern Dynamics) năm $2012$.
+	Cụ thể hơn những công trình quan trọng làm nên Huy chương Fields của June Huh bao gồm:
 	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Maryam Mirzakhani}
+	$\bullet$ June Huh đã cùng với Boton Wang sử dụng Hình học đại số và lý thuyết giao để chứng minh giả thuyết Dowling--Wilson về nhận biết các matroids. 
 	\vskip 0.1cm
-	Công việc của Maryam Mirzakhani liên quan trực tiếp hơn đến các cách mà mặt cong  phẳng có thể bị biến dạng. Nhắc lại, điều này có nghĩa là làm biến dạng các đa giác được sử dụng để tạo
-	ra mặt đó. Một loại biến dạng cụ thể như vậy thay đổi tất cả đa giác đồng thời bằng một phép biến đổi tuyến tính--nghĩa là, bằng cách tác động một ma trận khả nghịch vào các đa giác để tạo ra các hình dạng mới.
-	\begin{figure}[H]
-		%		\vspace*{-5pt}
-		\centering
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width= 1\linewidth]{9}
-		\vspace*{-15pt}
-	\end{figure}
-	Mirzakhani, trong công trình chung với Alex Eskin và Amir Mohammadi, đã nghiên cứu tập hợp các mặt cong có thể được xấp xỉ gần đúng bằng cách biến đổi tuyến tính một mặt ban đầu (quan điểm này là nền tảng cho nhiều kết quả đã nêu ở các mục trước và trong công trình của Avila). Trong không gian các mặt cong phẳng, tập hợp con này có thể là rất phức tạp--chẳng hạn như có dạng fractal.
+	$\bullet$ Karim Adiprasito, June Huh, và Eric Katz đã tìm ra một dạng tương tự của lý thuyết Hodge và chứng minh định lý Lefschetz dạng mạnh và quan hệ Hodge--Riemann cho các matroids tùy ý. Họ đã dùng các kết quả này để giải quyết giả thuyết Heron--Rota--Welsh về tính lõm loga của đa thức đặc trưng của một matroid. 
 	\vskip 0.1cm
-	Tuy nhiên, Mirzakhani và các cộng sự của cô ấy đã cho thấy rằng nó luôn rất tốt: Nó có thể được mô tả (địa phương) bằng các phương trình \emph{tuyến tính} trong tọa độ của
-	các đa giác tạo nên mặt cong phẳng. Trước đây, trường hợp không tầm thường duy nhất mà điều này đúng là của hình xuyến $2$ chiều, trong công trình của Curtis McMullen (đoạt giải Fields năm $1998$).
+	$\bullet$ Petter Branden và June Huh đã phát triển lý thuyết về các đa thức Lorentz, liên hệ với giải tích lồi và phiên bản rời rạc của nó thông qua hình học nhiệt đới. Họ đã chứng minh giả thuyết Mason dạng mạnh cho các matroids và tìm ra các ứng dụng khác nhau từ hình học đại số xạ ảnh cho tới mô hình Potts trong cơ học thống kê (đã được đề cập đến trong công việc của Hugo Duminil--Copin).
+	\vskip 0.1cm 
+	June Huh có một quá trình đào tạo về Toán không thật chính quy. Anh tự nhận không giỏi Toán khi học phổ thông và học cả chuyên ngành Vật lý ở bậc đại học ở Đại học Quốc Gia Seoul (Hàn Quốc) nhưng bảng điểm không thật tốt. Đến những năm cuối đại học, anh được tham dự các bài giảng về Hình học đại số của H. Hironaka (Huy chương Fields năm $1970$ của Nhật Bản, nổi tiếng với định lý giải kỳ dị) khi ông là Giáo sư mời của Đại học Quốc gia Seoul. Lúc này anh bắt đầu có cảm hứng và bắt đầu dành nhiều thời gian hơn cho Toán học. Tốt nghiệp Đại học xong, anh làm luận văn Thạc sĩ với một trong những chuyên gia hàng đầu về Hình học đại số của Hàn Quốc là Young--Hoon Kiem. Sau đó, năm $2009$, anh được nhận làm luận án Tiến sĩ Toán ở Mỹ, ban đầu là Đại học Illinois ở Urbana--Champaign, sau đó chuyển sang Đại học Michigan. Anh bảo vệ luận án Tiến sĩ năm $2014$ dưới sự hướng dẫn của một chuyên gia nổi tiếng về Hình học đại số là M. Mustata. Tuy bắt đầu làm luận án Tiến sĩ khá muộn, nhưng ngay từ những năm đầu khi làm luận án Tiến sĩ, anh đã dùng những kỹ thuật của hình học đại số để chứng minh giả thuyết Read về hệ số của đa thức sắc số (chromatic polynomials) trong lý thuyết đồ thị. Đây là một giả thuyết từ hơn $40$ năm trước xuất phát từ bài toán $4$ màu nổi tiếng mà lời giải của nó dài vài trăm trang được đưa ra bởi K. Appel và W. Haken năm $1976$ cùng với sự hỗ trợ của máy tính. Bài báo của June Huh ngay lập tức đã được chú ý và in ở một tạp chí hàng đầu là Journal of the American Mathematical Society. Một điều thú vị là chính trong bài báo này, June Huh cũng đã trả lời một câu hỏi liên quan của GS. Ngô Việt Trung và J. K. Verma về số bội trộn trong Đại số giao hoán. Nhờ những kết quả quan trọng trong luận án, anh được nhận học bổng nghiên cứu danh giá của Viện Clay, và nhận vị trí Veblen Instructor, cũng như vị trí giáo sư mời ở Viện nghiên cứu cao cấp Princeton. Đến năm $2020$, anh nhận vị trí giáo sư ở Đại học Stanford, nhưng chỉ $1$ năm sau đó anh quay lại nhận vị trí giáo sư ở Đại học Princeton.     
 	\vskip 0.1cm
-	Một điều ngạc nhiên là điều kiện về mặt cong nào có thể được xấp xỉ gần đúng bằng cách biến dạng tuyến tính của mặt ban đầu lại mang thông tin về động lực học của các đường thẳng trên mặt ban đầu. Do đó, công việc được mô tả trong đoạn văn trước cho hệ quả về các đường đi bi--a--bao gồm cả các đường đi bi--a tuần hoàn--chỉ mới bắt đầu được khám phá.
+	$4.$ Maryna Viazovska: Như đã nói ở trên được trao huy chương Fields một phần vì những đóng góp trong bài toán xếp hình cầu.
 	\vskip 0.1cm
-	Các chi tiết khác về công trình của Mirzakhani về các mặt cong phẳng có thể được tìm thấy trong bài báo cáo của McMullen tại Đại hội Toán học Thế giới ``Công trình Toán học của Maryam Mirzakhani", có trên trang web cá nhân của ông (\url{http://bit.ly/1DyH3Ha}).
+	Một vấn đề có từ lâu trong toán học là tìm một cách sắp xếp dày đặc nhất (tối ưu nhất) những hình cầu giống nhau trong không gian với số chiều cho trước. Dày đặc nhất ở đây hiểu là tỉ lệ giữa tổng thể tích các hình cầu và thể tích hình chứa nó là lớn nhất. Bài toán này cũng rất tự nhiên trong thực tế khi ta đi du lịch và cần phải xắp xếp sao cho balo chứa được nhiều đồ vật nhất. Ở chiều $2$ ta biết cách sắp xếp theo hình lục lăng (một hình tròn ở giữa, $6$ hình tròn đặt xung quanh trong một lục giác đều) cho ta cách xếp dày đặc nhất. Với số chiều $3$, từ vài trăm năm trước, J. Kepler đã dự đoán cách xếp các quả cam chứa trong một hình kim tự tháp sẽ cho kết quả tối ưu. Năm $1998$, T. Hales chứng minh giả thuyết Kepler với một chứng minh gần $100$ trang in ở Annals of Mathematics cùng với sự trợ giúp của máy tính. Bài toán sắp xếp hình cầu không có thêm kết quả gì ở các số chiều khác cho đến năm $2016$, M.~Viazovska chỉ ra dàn $E_{8}$ (dàn (lưới) trong không gian $\mathbb{R}^8$, liên quan đến nhóm Lie dạng $E_{8}$) cho cách xếp tối ưu nhất trong chiều $8$. Ít lâu sau đó cùng với H. Cohn, A. Kumar, S. Miller và D. Radchenko, M.~Viazovska đã chứng minh dàn Leech cho cách sắp xếp dày đặc nhất ở số chiều $24$. Dàn Leech nằm trong không gian $\mathbb{R}^{24}$ có nhóm các tự đẳng cấu là nhóm đơn hữu hạn loại lẻ tẻ (sporadic) đưa ra bởi Conway. Lời giải của M.~Viazovska dựa trên cách tiếp cận của H. Cohn và N.~Elkies (Ann. Math. $2003$), những người đã dùng công thức tổng Poisson của giải tích điều hòa để tìm ra một chặn trên cho những khả năng có thể có của mật độ cho bài toán xếp cầu với số chiều tùy ý. Công trình của các nhà toán học này cần đến sự tồn tại của những hàm Schwatz với những tính chất đặc biệt (chẳng hạn hàm đó và biến đổi Fourier của nó triệt tiêu tại những giá trị độ dài của vectơ trong các dàn tương ứng). H. Cohn và N.~Elkies nghĩ rằng những hàm có tính chất đặc biệt như thế là tồn tại nhưng chưa có ý tưởng gì để xây dựng. Khi công việc dừng ở đó khoảng $10$ năm thì M.~Viazovska xuất hiện và đưa ra một phương pháp hoàn toàn mới để đưa ra những hàm này dựa trên lý thuyết về các dạng modular. Như chúng ta đã biết các dạng modular là một lĩnh vực thuộc Lý thuyết số hiện đại và cung cấp những điểm mấu chốt cho lời giải bài toán Fermat của A. Wiles từ khoảng gần $30$ năm trước. Sau đó kỹ thuật chọn hàm Schwatz dùng dạng modular cũng đã được H. Cohn khai thác và thu được những kết quả quan trọng gần đây. Việc dùng các dạng modular là một đối tượng rất khác để giải quyết vấn đề nói trên ít nhiều có sự hợp lý nếu chúng ta nhìn vào đào tạo của M.~Viazovska. Ngay từ phổ thông, chị đã là một học sinh giỏi Toán, tốt nghiệp Đại học ở Ucraina, sau đó làm luận văn cao học Đức, rồi quay lại Ucraina làm luận án Tiến sĩ và bảo vệ vào năm $2010$. Sau đó chị sang Đức làm luận án Tiến sĩ với một trong hai người thầy hướng dẫn là Don Zagier, một chuyên gia về nhiều thứ trong đó có lý thuyết các dạng modular. Một điều đáng ngạc nhiên là mặc dù lời giải bài toán xếp cầu trong trường hợp $3$ chiều rất dài và cần đến máy tính kiểm tra nhưng lời giải trong trường hợp $8$ chiều và $24$ chiều lại khá ngắn gọn (khoảng $20$ trang). Vì những kết quả độc đáo này, M.~Viazovska đã nhận được giải thưởng nghiên cứu của Viện Clay năm $2017$ dành cho những kết quả Toán học xuất sắc nhất trong năm.        
 	\vskip 0.1cm
-	{\bf\color{duongvaotoanhoc}Tài liệu đọc thêm}
+	Sau lời giải bài toán xếp cầu ở chiều $8$ và $24$, M.~Viazovska đã phát triển tiếp tục ý tưởng của riêng mình. Chị đã cùng với D.~Radchenko ($2019$) chứng minh mọi hàm Schwatz chẵn thỏa mãn hàm đó cùng với biến đổi Fourier triệt tiêu tại các số $\sqrt{n}$ ($n$ là số nguyên không âm) luôn đồng nhất bằng $0$. Kết quả này được các chuyên gia đánh giá là rất đáng ngạc nhiên.
 	\vskip 0.1cm
-	[$1$] Leonid Bunimovich, ``Dynamical billiards," {\it Scholarpedia} $2$, no. $8$ ($2007$): $1813$.
+	{\bf\color{duongvaotoanhoc} Kết luận:}  Từ những phân tích kể trên ta thấy đóng góp của những giải thưởng Fields luôn rất đặc biệt, thường là lời giải cho những vấn đề quan trọng, và lời giải nhiều khi đến từ những lĩnh vực hoàn toàn khác.
 	\vskip 0.1cm
-	[$2$] Howard Masur, ``Closed trajectories for quadratic differentials with an application to billiards," {\it Duke Math. J.} $53$, no. $2$ ($1986$): $307-314$.
+	\textbf{\color{duongvaotoanhoc}Tài liệu tham khảo}
 	\vskip 0.1cm
-	[$3$] Richard Schwartz, ``Obtuse triangular billiards II:$100$ degrees worth of periodic trajectories," {\it Experimental Mathematics} $18$, no. $2$ ($2008$): $137-171$.
+	[$1$] Trang web \url{https://www.mathunion.org/imu-awards/fields-medal/fields-medals}\\ \url{-2022}
 	\vskip 0.1cm
-	[$4$] Serge Tabachnikov, {\it Geometry and Billiards}, Providence, RI: American Mathematical Society, $2005$.
+	[$2$] Các trang wikipedia.
 \end{multicols}
