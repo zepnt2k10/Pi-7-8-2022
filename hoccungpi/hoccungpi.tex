@@ -2,299 +2,247 @@
 \pagestyle{hoccungpi}
 \everymath{\color{hoccungpi}}
 \graphicspath{{../hoccungpi/pic/}}
-\blfootnote{$^*${\color{hoccungpi}Dựa trên bài giảng của tác giả tại trường THPT chuyên Quốc học Huế, tháng $5/2022$.}}
-\blfootnote{$^1${\color{hoccungpi}Viện Toán học.}}
+\blfootnote{$^{1}$\color[named]{hoccungpi}Thái Nguyên.}
 \begingroup
-\AddToShipoutPicture*{\put(0,616){\includegraphics[width=19.3cm]{../bannerhoccungpi}}} 
-\AddToShipoutPicture*{\put(115,520){\includegraphics[scale=1]{../tieude.pdf}}} 
+\AddToShipoutPicture*{\put(0,616){\includegraphics[width=19.3cm]{../bannerhoccungpi}}}
+\AddToShipoutPicture*{\put(44,525){\includegraphics[scale=1]{../tieude2.pdf}}}
 \centering
 \endgroup
-\vspace*{185pt}
+\vspace*{192pt}
+
+Trong bài viết này, tác giả xin giới thiệu với bạn đọc phương pháp sử dụng tiếp tuyến để giải một số bài toán về phương trình, bất phương trình thông qua tính lồi, lõm của hàm số.
 
 \begin{multicols}{2}
-%	\setlength{\abovedisplayskip}{5pt}
-%	\setlength{\belowdisplayskip}{5pt}
-	\textbf{\color{hoccungpi}Công thức Euler cho đa diện}
+	\textbf{\color{hoccungpi}$\pmb{1.}$ Khái niệm về tính lồi, lõm và điểm uốn của đồ thị}
 	\vskip 0.1cm
-	Các khối đa diện là đối tượng hình học rất quen thuộc với mỗi người. Nhắc lại rằng, một đa diện lồi trong không gian ba chiều là một hình khối trong không gian mà các mặt là các đa giác lồi. Kết quả mà chúng ta quan tâm trong bài viết này là được phát biểu sau đây.
+	Xét đồ thị $ACB$ của hàm số $y = f(x)$ biểu diễn trong hình dưới đây. Ta giả thiết rằng tại mọi điểm của nó, đồ thị đã cho đều có tiếp tuyến. Tại mọi điểm của cung $AC$ tiếp tuyến luôn luôn ở \emph{phía trên} của $AC$, ta nói $AC$ là một \textbf{\color{hoccungpi}\itshape cung lồi}. Nếu $a$ là hoành độ của $A$ và $c$ là hoành độ của $C$ thì khoảng $(a; c)$ được gọi là một khoảng lồi của đồ thị. Tại mỗi điểm của cung $CB$ tiếp tuyến luôn luôn ở \emph{\itshape phía dưới} của $CB$. Ta nói $CB$ là một \textbf{\color{hoccungpi}\itshape cung lõm}. Nếu $c$ là hoành độ của $C$, $b$ là hoành độ của $B$ thì khoảng $(c; b)$ được gọi là một khoảng lõm của đồ thị.
+	\begin{center}
+		\begin{tikzpicture}
+			\def\hsf(#1){((#1)^3-5*(#1)^2+7*(#1)-1}%ham so f
+			\draw[-stealth,very thin](-.5,0)--(3.8,0)node[below left,scale=.8]{$x$};%truc Ox
+			\draw[-stealth,very thin](0,-.5)--(0,3.5) node[below left,scale=.8]{$y$};%truc Oy
+			\draw[fill=white](0,0)circle(.6pt)node[below left,scale=.8]{$O$};%goc toa do O
+			\path (1/3,{\hsf(1/3)})coordinate(A) (19/6,{\hsf(19/6)})coordinate(B) (5/3,{\hsf(5/3)})coordinate(C)
+			(8/3,{\hsf(8/3)})coordinate(M) (2/3,{\hsf(2/3)})coordinate(N);
+			\draw[color=black,densely dash dot, thin] (A)--(1/3,0)node[below ,scale=.8] {$a$} (B)--(19/6,0)node[below ,scale=.8] {$b$} (C)--(5/3,0)node[below ,scale=.8] {$c$};
+			\draw[blue,smooth,samples=100] plot[domain=.2:3.2](\x,{\hsf(\x)});
+			\draw[red] (C)--+(125:.8)(C)--+(-55:.8) 
+			(N)--+(60:.8)(N)--+(-120:.8) 
+			(M)--+(60:.8)(M)--+(-120:.88);
+			\foreach \p/\g in{A/140,B/0,C/30,M/0,N/120} \draw[fill=white](\p)circle(.6pt)+(\g:.1)node[scale=.6]{$\p$};
+		\end{tikzpicture}
+	\end{center}
+	Điểm phân cách giữa cung lồi và cung lõm được gọi là \textbf{\color{hoccungpi}\itshape điểm uốn}. Điểm $C$ của đồ thị trong hình là điểm uốn.
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Định lý} $\pmb{1}$ (Công thức Euler)\textbf{\color{hoccungpi}.} \textit{Gọi $v$, $e$ và $f$ tương ứng là số đỉnh, số cạnh và số mặt của  một khối đa diện lồi $P$. Khi đó}
-	\begin{align*}
-		v-e+f=2.
+	Nói cách khác thì: 
+	Nếu hàm số $y=f(x)$ có đạo hàm trên khoảng $I$ ta nói rằng
+	\vskip 0.1cm
+	$a)$ Đồ thị ($C$) của hàm số $y = f(x)$ lồi trên khoảng $I$ nếu tiếp tuyến của ($C$) tại mỗi điểm của nó đều nằm phía trên đồ thị.
+	\vskip 0.1cm
+	$b)$ Đồ thị ($C$) của hàm số $ y = f(x)$ lõm trên khoảng $I$ nếu tiếp tuyến của nó tại mỗi điểm của nó đều nằm phía dưới đồ thị.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Nhận xét:} Một hàm được gọi là lồi (tương ứng, lõm) nếu đồ thị của nó là lồi (tương ứng, lõm). Đồ thị hàm lồi có hình dạng giống như một cái mũ $\cap $ còn của hàm lõm thì có hình dạng giống như một cái cốc  $\cup $.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}$\pmb{2.}$ Dấu hiệu lồi, lõm và điểm uốn của đồ thị}
+	\vskip 0.1cm
+	Ta thừa nhận dấu hiệu lồi, lõm sau đây:
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Định lý:} Cho hàm số $y = f(x)$ có đạo hàm đến cấp hai trên khoảng $I$.
+	\vskip 0.1cm
+	$1)$ Nếu $f "(x)< 0$ với mọi $x\in I$ thì đồ thị của hàm số \textbf{\color{hoccungpi}\itshape lồi} trên khoảng đó. 
+	\vskip 0.1cm
+	$2)$ Nếu $f "(x)> 0$ với mọi $x\in I$ thì đồ thị của hàm số  \textbf{\color{hoccungpi}\itshape lõm} trên khoảng đó.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Định lý:} Giả sử hàm số $y = f(x)$ có đạo hàm cấp hai trên một khoảng $I$ chứa điểm $ x _0$. Nếu $f"(x_0) = 0$ và $f"(x) $ đổi dấu khi $x$ qua điểm $x_0$ thì $U(x_0;f(x_0))$ là một điểm uốn của đồ thị hàm số $y = f(x)$.
+	\vskip 0.1cm
+	Tại điểm uốn tiếp tuyến đi xuyên qua đồ thị.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}$\pmb{3.}$ Điều kiện để hai đường cong tiếp xúc nhau}
+	\vskip 0.1cm
+	Điều kiện để hai đường cong $y= f(x)$ và $y=g(x) $ tiếp xúc nhau là hệ phương trình sau có nghiệm và nghiệm của hệ là hoành độ giao điểm của hai đường cong đó \begin{align*}
+		\begin{cases}f(x)=g(x)\\ f'(x)=g'(x)\end{cases}\tag{$*$}
 	\end{align*}
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{Euler_GDR_stamp}
-		\caption{\small\textit{\color{hoccungpi}Leonhard Euler ($1707-1783$) là một nhà toán học, nhà vật lý, nhà thiên văn học, nhà địa lý, nhà logic và kỹ sư người Thụy Sĩ.}}
-		\vspace*{-10pt}
-	\end{figure}
-	Trước khi trình bày chứng minh, ta hãy kiểm tra công thức Euler cho một số đa diện quen thuộc.
+	Vậy, đồ thị của $f$ và $g$ tiếp xúc nhau tại $x_0$ khi và chỉ khi $x_0$ là nghiệm của hệ ($*$).
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{1.}$
+	Thêm vào đó, nếu hai đường cong $y=f(x)$ và $y=g(x)$ có tính lồi lõm trái ngược nhau, ngoài ra có chung nhau tiếp tuyến thì khi đó phương trình $f(x)=g(x)$ có nghiệm duy nhất.
+	\begin{center}
+		\begin{tikzpicture}
+			\def\hsf(#1){-.125*(#1)^2+(#1)}%ham so f
+			\def\hsg(#1){.125*(#1)^2+1}%ham so g
+			\draw[-stealth] (-.5,0)--(5,0)node[below]{$x$};
+			\draw[-stealth] (0,-.5)--(0,3)node[left]{$y$};
+			\draw[fill=white](0,0)circle(.6pt)node[below left]{$O$};
+			\draw[densely dash dot,very thin] (0,3/2)node[left]{$y_0$}-|(2,0) node[below]{$x_0$};
+			\draw[smooth,blue]plot[domain=.25:4](\x,{\hsf(\x)}) node[below]{$y=f(x)$};
+			\draw[smooth,teal]plot[domain=-.25:3.5](\x,{\hsg(\x)}) node[above]{$y=g(x)$};
+			\draw[smooth,very thin,purple]plot[domain=-.25:4](\x,{.5*\x+1/2});
+			\draw[fill=white](2,3/2)circle(.5pt)node[above]{$M_0$};
+		\end{tikzpicture}
+	\end{center}
+	Cần phải chú ý rằng nhiều tài liệu trong và ngoài nước hiện nay định nghĩa về tính lồi (convex), lõm (concave) của đồ thị hàm số khác như đã nêu ở trên. Cụ thể là hàm lồi trong bài viết này được gọi là hàm lõm trong một số tài liệu, còn hàm lõm trong bài viết này thì lại được họ gọi là hàm lồi. 
 	\vskip 0.1cm
-	\textit{$1.$ Tứ diện
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.45\linewidth]{Tetrahedron}
-		\vspace*{-10pt}
-	\end{figure}
-	có $4$ đỉnh, $6$ cạnh và $4$ mặt. Công thức Euler cho tứ diện là hệ thức sau đây:
+	\textit{\textbf{\color{hoccungpi}Ta sẽ vận dụng những tính chất và nhận xét trên để ứng dụng trong việc giải một số bài toán về phương trình, bất phương trình, đây cũng chính là cở sở của phương pháp tiếp tuyến trên}}.
+	\vskip 0.1cm
+	Trong bài viết này chúng ta viết tắt VT cho vế trái, VP cho vế phải.
+	Việc kiểm tra dấu hiệu lồi, lõm của hàm số bằng cách tính đạo hàm cấp hai trong một số ví dụ sẽ được dành cho bạn đọc.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}$\pmb{4.}$ Các ví dụ}
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{1.}$} Giải phương trình
 	\begin{align*}
-		\boxed{4-6+4=2.}
+		x^2-2x+5=\sqrt{x+3}+\sqrt{5-x}.
 	\end{align*}
-	$2.$ Hình lập phương
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.45\linewidth]{Hexahedron}
-		\vspace*{-10pt}
-	\end{figure}
-	có $8$ đỉnh, $12$ cạnh và $6$ mặt. Công thức Euler cho tứ diện nói rằng
+	\textit{Lời giải.} Điều kiện $-3\leq x\leq 5$. Vế trái là hàm lõm còn vế phải là hàm lồi (bạn đọc tự kiểm tra), chúng có chung tiếp tuyến tại $(1;4)$. Vậy $x=1$ là nghiệm duy nhất của phương trình.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Nhận xét:} Bài tập kiểu như trên rất quen thuộc với nhiều bạn đọc, phương pháp thường dùng là đánh giá bất đẳng thức. Ở đây, chúng ta sử dụng tiếp cận khác thông qua tiếp tuyến.
+	\vskip 0.1cm
+	Ta sẽ đến với những ví dụ khác, đòi hỏi đến cả kỹ năng nhẩm nghiệm.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{2.}$} Giải phương trình
 	\begin{align*}
-		\boxed{8-12+6=2.}
+		\sqrt[6]{6x-5}=\dfrac{x^{7}}{8x^{2}-10x+3}.
 	\end{align*}
-	$3.$ Kim  tự tháp
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.45\linewidth]{Pyramid}
-		\vspace*{-10pt}
-	\end{figure}
-	có $5$ đỉnh, $8$ cạnh và $5$ mặt. Trong trường hợp này, công thức Euler khẳng định rằng
+	\textit{Lời giải.} Điều kiện $x\ge \frac{5}{6}$. Với $x\ge \frac{5}{6}$ thì $VT$ là hàm lồi, liên tục, vì vậy đồ thị hàm số nằm dưới tiếp tuyến của nó tại điểm $x=1$ là $y=x+1$.
+	Với $x\ge\frac{5}{6}$ thì $VP$ là hàm lõm, liên tục, vì vậy đồ thị hàm số nằm trên tiếp tuyến của nó tại điểm $x=1$ là $y=x+1$.
+	\vskip 0.1cm
+	Vậy $x=1$ là nghiệm duy nhất của phương trình. 
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{3.}$} Cho hai hàm số $f(x)$ và $g(x)$ được xác định như sau: $f(x)=\sqrt{13x^{2} - 6x + 10 } + \sqrt{5x^{2} -13x + \frac{17}{2}} + \sqrt{17x^{2} - 48x + 36} $ và $g(x)= \dfrac{1}{2}(36x - 8x^{2} - 21)$.
+	\vskip 0.1cm
+	Giải phương trình $f(x)=g(x)$.
+	\vskip 0.1cm
+	\textit{Lời giải.} Điều kiện $x\in \mathbb R$. Đặt $h(x)=f(x)-g(x)$\\ Không khó để chỉ ra $h(x)$ là hàm lõm, liên tục. Nhận thấy $h(\dfrac{3}{2})=0$ và $h'(\dfrac 32)=0$ , do đó đồ thị hàm số tiếp xúc với trục hoành tại điểm $x=\dfrac{3}{2}$.
+	\vskip 0.1cm
+	Vậy $x=\dfrac{3}{2}$ là nghiệm duy nhất của phương trình của bài toán.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{4.}$} Giải phương trình
 	\begin{align*}
-		\boxed{5-8+5=2.}
+		x\sqrt{x^2\!+\!6}\!+\!(x\!+\!1)\sqrt{x^2\!+\!2x\!+\!7}\!=\!\dfrac{13}{5}(2x\!+\!1)
 	\end{align*}
-	$4.$ Tuy nhiên, đối với hình ba chiều sau, giống như một chiếc phao, còn gọi là ``xuyến lục giác",
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.5\linewidth]{Hexagonal_torus}
-		\vspace*{-10pt}
-	\end{figure}
-	là một hình khối có $6\times 4=24$ đỉnh, $24+ 24=48$ cạnh và $6\times 4=24$ mặt, trong trường hợp này, công thức Euler không còn đúng nữa, bởi vì
+	\textit{Lời giải.}  Điều kiện $x\in\mathbb R$. Đặt $g(x)=x\sqrt{x^2+6}$ và $f(x)=g(x+1)+g(x)$.
+	\vskip 0.1cm
+	Ta dễ kiểm tra thấy rằng:
+	\vskip 0.1cm
+	$a)$ $g(x)$ là hàm lẻ và $g''(x)$ cũng là hàm lẻ; hơn nữa ta cũng có $f(-\dfrac 12)=f''(-\dfrac 12)=0$.
+	\vskip 0.1cm
+	$b)$ $g(x)$ và $g''(x)$ là hàm đồng biến, suy ra $f(x)$ và $f''(x)$ cũng là hàm đồng biến.
+	\vskip 0.1cm
+	$c)$ Tiếp tuyến với đồ thị của hàm số  $f(x)$ tại $x=-\dfrac 12$ là $y=\dfrac{13}5(2x+1)$.
+	\vskip 0.1cm
+	Vậy đồ thị hàm số $f(x)$ nằm dưới tiếp tuyến của nó khi $x<-\dfrac 12$ và đồ thị hàm số $f(x)$ nằm trên tiếp tuyến của nó khi $x>-\dfrac 12$.
+	\vskip 0.1cm
+	Vậy $x=-\dfrac{1}{2}$ là nghiệm duy nhất của phương trình.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Chú ý:} Ở ví dụ này nghiệm của phương trình chính là hoành độ điểm uốn của đồ thị.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{5.}$} Giải phương trình
 	\begin{align*}
-		\boxed{ 24 - 48 + 24 = 0\neq  2}.
+		&3\left(x^{3}+\frac{x}{\sqrt{\left(1+x^{2} \right)^{3}}} \right)+2\\
+		=\,\,&\sqrt{\left(1+x \right)^{3}}+\sqrt{\left(1-x \right)^{3}}.
 	\end{align*}
-	Điều này đến từ việc hình khối trên đây không phải là một hình lồi!}
+	\textit{Lời giải.}  Điều kiện xác định $x\in[-1;1]$. Nhận xét rằng $x=0$ là một nghiệm của phương trình. Đặt $f(x)=x+(1+x)^{-\frac 32}$ và $g(x)=\dfrac{(1+x)^{\frac 32}+(1-x)^{\frac 32}-2}x$.
 	\vskip 0.1cm
-	$\pmb{2.}$ \textbf{\color{hoccungpi}Chứng minh công thức Euler}
+	Giả sử $x\ne 0$. Phương trình đã cho có thể được viết lại thành $3f(x^2)=g(x)$.
 	\vskip 0.1cm
-	Trong khi công thức Euler ban đầu được phát biểu cho các khối đa diện (lồi),  ngày nay nó thường được phát biểu trong bối cảnh tổng quát hơn với các đồ thị phẳng.
+	Chú ý rằng:
 	\vskip 0.1cm
-	Nhắc lại rằng một đồ thị là $G=(V, E)$ là một cặp được tạo thành từ một tập đỉnh $V$ và một tập cạnh $E$, trong đó mỗi cạnh được xác định bởi $2$ đầu mút của nó (nghĩa là mỗi cạnh có dạng $e=\{A,B\}$, trong đó  $A, B$ là hai đỉnh nào đó của đồ thị). Chúng ta thường mô tả đồ thị bằng hình vẽ: các đỉnh bởi các điểm và mỗi cạnh bởi một đường cong liên tục nối hai đỉnh với nhau. 
+	Một mặt, $g(x)$ là hàm lẻ, nhận giá trị âm trên $[-1;0)$ và dương trên $(0, 1]$ và đồng biến trên mỗi khoảng này (bạn đọc tự kiểm tra), nên $g(x)\le g(1)=2\sqrt 2-1 <1$ với mọi $0\ne  x\in[-1,1]$.
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{2.}$
-	\textit{Ta có các ví dụ sau đây về đồ thị $K_5$ (hình bên trái) và $K_{3,3}$ (hình bên phải):}
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{k5_n_k33}
-		\vspace*{-15pt}
-	\end{figure}
-	Một \emph{đồ thị phẳng} là một đồ thị mà ta {\emph có thể} vẽ trong mặt phẳng sao cho các cạnh của nó chỉ gặp nhau tại các đỉnh của đồ thị. Lưu ý rằng một đồ thị có thể có nhiều cách vẽ khác nhau (còn gọi là các biểu diễn) và một đồ thị phẳng có thể có các biểu diễn ``không phẳng" -- một biểu diễn hình học mà trong đó các cạnh có thể cắt nhau.
+	Mặt khác, $f(x)$ là hàm lõm trên $[0,1]$ (bạn đọc tự kiểm tra), vì vậy đồ thị hàm số nằm trên tiếp tuyến của nó tại điểm $x=0$ : $f(x)\ge 1-\frac x2\ge \frac 12$.
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{3.}$ \textit{Ba hình vẽ sau đây đều là các biểu diễn khác nhau của đồ thị $K_4$: đồ thị có $4$ đỉnh, trong đó hai đỉnh bất kỳ được nối với nhau bằng một cạnh.
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{K4}
-		\vspace*{-15pt}
-	\end{figure}
-	Tuy nhiên, hình bên trái là một biểu diễn không phẳng và hai hình còn lại là các biểu diễn phẳng. 
+	Vậy $f(x^2)\ge \frac 12$, suy ra $3f(x^2)\ge \frac 32 > 1\ge g(x)$, do đó phương trình không còn nghiệm nào nữa. 
 	\vskip 0.1cm
-	Do đó ta có thể kết luận rằng $K_4$ là một đồ thị phẳng.}
+	Vậy $x=0$ là nghiệm duy nhất của phương trình đã cho.
 	\vskip 0.1cm
-	Nhận xét rằng, một khối đa diện lồi là một đồ thị phẳng. Cụ thể hơn, với một đa diện lồi bất kỳ, đồ thị với các đỉnh là các đỉnh của khối đa diện và các cạnh được cho bởi các cạnh của khối đa diện là một đồ thị phẳng.
-	\vskip 0.1cm
-	Để chỉ ra điều đó, ta cần chỉ ra đồ thị xây dựng như trên có một biểu diễn phẳng. Có một cách trực quan để thấy điều đó như sau: cắt một trong các mặt của hình đa diện dọc theo các cạnh trên biên của mặt đó và hãy hình dung rằng các mặt còn lại được tạo thành từ cao su (sao cho chúng có thể co giãn được). Sau đó kéo căng hình đa diện có một mặt đã bị  bỏ đi để khiến cho nó trở thành một hình phẳng. Bằng cách đó, ta thu được một biểu diễn phẳng của đồ thị liên kết với khối đa diện. 
-	\vskip 0.1cm
-	Cho một đồ thị phẳng $G$ và cho một biểu diễn phẳng của $G$. Thế thì các cạnh của $G$ phân chia mặt phẳng thành các miền. 
-	\vskip 0.1cm
-	Một cách chính xác hơn, một mặt của đồ thị phẳng là một miền cực đại (theo quan hệ bao hàm) không chứa bất kỳ đỉnh cũng như một phần nào của các cạnh của đồ thị. Ta có thể hình dung về các mặt của một đồ thị phẳng một cách trực quan như sau: xét một biểu diễn phẳng của một đồ thị phẳng trên một mảnh giấy, sau đó, lấy kéo cắt dọc theo các cạnh của đồ thị, thế thì các mảnh giấy rời ra chính là các mặt của đồ thị phẳng.
-	\vskip 0.1cm
-	Ta có thể nhận thấy rằng, với một biểu diễn phẳng của một đồ thị phẳng, có duy nhất một mặt là không bị chặn (các cạnh bao quanh nó tạo thành một đường khép kín, hay một chu trình), còn các mặt còn lại, nếu có, là các mặt bị chặn (các cạnh bao quanh nó tạo thành một chu trình).
-	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{4.}$
-	\textit{$1.$ Đồ thị con bướm
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.6\linewidth]{Butterfly}
-		\vspace*{-10pt}
-	\end{figure}
-	là một đồ thị phẳng có $5$ đỉnh, $6$ cạnh và $3$ mặt (gồm $2$ mặt bị chặn là các tam giác và $1$ mặt không bị chặn).
-	\vskip 0.1cm
-	$2.$  Đồ thị $K_4$
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.4\linewidth]{K4b}
-		\vspace*{-5pt}
-	\end{figure}
-	là một đồ thị phẳng có $4$ đỉnh, $6$ cạnh và $4$ mặt (gồm $3$ mặt bị chặn là các tam giác và $1$ mặt không bị chặn).}
-	\vskip 0.1cm
-	Bây giờ, ta đã sẵn sàng để phát biểu công thức Euler cho đồ thị phẳng.
-	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Định lý} $\pmb{2.}$ (Công thức Euler cho đồ thị phẳng)\textbf{\color{hoccungpi}.} \textit{Cho $G$ là một đồ thị phẳng liên thông  với $v$ đỉnh, $e$ cạnh. Giả sử $f$ là số mặt của một biểu diễn phẳng (bất kỳ) của $G$. Thế thì}
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{6.}$} Cho số lẻ $n>1$. Giải phương trình
 	\begin{align*}
-		v-e + f =2.
+		n^{x^n-1}+n^{\frac{1}{x}}=n+1.
 	\end{align*}
-	Nhắc lại rằng một đồ thị được gọi là liên thông nếu ta có thể di chuyển theo các cạnh để đi từ một đỉnh bất kỳ tới một đỉnh bất kỳ khác.
+	\textit{Lời giải.} Điều kiện xác định: $x \neq 0$. 
+	Nếu $x<0$ thì VT$<2<$VP nên trường hợp này phương trình vô nghiệm.
 	\vskip 0.1cm
-	\textit{Chứng minh.} Hãy coi mặt vô hạn (miền của mặt phẳng không bị chặn) của biểu diễn phẳng của $G$ là đại dương, các cạnh của biểu diễn phẳng là những con đê làm bằng đất và các mặt bị chặn là những cánh đồng khô. Dưới đây là một ví dụ điển hình của đồ thị phẳng liên thông.
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.5\linewidth]{proof_Euler_1}
-		\vspace*{-10pt}
-	\end{figure}
-	Trong hình vẽ bên dưới, một cạnh nằm trên biên của một mặt bị chặn được tô đỏ và cạnh này tiếp giáp với đại dương. Khi con đê đại diện bởi cạnh màu đỏ này bị ``phá vỡ", cánh đồng ở phía bên kia của con đê được thông ra biển và trở nên ngập nước, được minh họa bằng màu xanh ngọc (cho dù đúng ra nó phải có màu xanh lam của đại dương).
-	\begin{figure}[H]
-		\centering
-		\vspace*{5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.5\linewidth]{proof_Euler_2}
-		\vspace*{-10pt}
-	\end{figure}
-	Nếu đồ thị liên thông có các mặt bị chặn (biên của các mặt như vậy là các đường khép kín: các chu trình),  ta có thể loại bỏ một cạnh khỏi mỗi mặt này mà vẫn bảo toàn tính chất liên thông của đồ thị (và tất nhiên tính phẳng cũng vậy). 
-	\vskip 0.1cm
-	Ta dễ dàng nhận nhận thấy có một song ánh giữa các cạnh bị bỏ đi để nhận được một đồ thị liên thông, không có chu trình và các mặt bị chặn của đồ thị. Trong hình vẽ sau, các cạnh bị bỏ đi được tô bằng bằng màu đỏ và các cánh đồng ngập nước được hiển thị bằng màu xanh ngọc.
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.5\linewidth]{proof_Euler_3}
-		\vspace*{-10pt}
-	\end{figure}
-	Đồ thị nhận được sau cùng, có cùng tập đỉnh với đồ thị ban đầu và các cạnh còn lại màu đen, được gọi là một \emph{cây bao trùm} của đồ thị ban đầu.  (Do đó, một cây bao trùm của một đồ thị liên thông có cùng số đỉnh với đồ thị ban đầu, nhưng ít cạnh hơn, trừ khi bản thân đồ thị ban đầu là một cây.) Theo định nghĩa, một cây là một đồ thị liên thông và không có chu trình. 
-	\vskip 0.1cm
-	Chẳng hạn, ba đồ thị đầu tiên là một cây, còn đồ thị ngoài cùng bên phải không phải là cây.
-	\begin{figure}[H]
-		\centering
-		\vspace*{5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{trees}
-		\vspace*{-10pt}
-	\end{figure}
-	Ta có kết quả quen thuộc sau đây: với một cây bất kỳ, số cạnh và số đỉnh của nó được ràng buộc với nhau bởi hệ thức: 
+	Xét trường hợp $x>0$. Xét hàm số $f(x):\mathbb R^+\to \mathbb R$ xác định bởi:
 	\begin{align*}
-		\boxed{v = e + 1.}
+		f(x)=n^{x^n-1}+n^{\frac 1x}-n-1
 	\end{align*}
-	Chứng minh của kết quả này có thể được tìm thấy trong nhiều tài liệu về lý thuyết đồ thị. Tuy nhiên, tác giả của bài viết khuyên các bạn đọc quan tâm tự chứng minh kết quả trên.
-	\vskip 0.1cm
-	Bây giờ, chúng ta hãy đếm các cạnh của đồ thị ban đầu bằng cách cộng số cạnh bị loại bỏ (để thu được một cây) với các cạnh còn lại (của cây nhận được).  Các cạnh bỏ đi chính là các cạnh màu đỏ và các cạnh còn lại chính là các cạnh màu đen. Vì vậy, số cạnh của đồ thị ban đầu là
+	Ta lần lượt có:
 	\begin{align*}
-		e = e_{\textrm{đỏ}} + e_{\textrm{đen}}.
+		f'(x)=&\,n(\ln n)x^{n-1}n^{x^n-1}-\frac {\ln n}{x^2}n^{\frac 1x}.\\
+		f''(x)=&\,n(\ln n)\left(n(\ln n)x^{2n-2}+(n-1)x^{n-2}\right)\\
+		&\times n^{x^n-1}+\ln n\left(\frac {\ln n}{x^4}+\frac 2{x^3}\right)n^{\frac 1x}.
 	\end{align*}
-	Bây giờ, một mặt, chúng ta biết rằng $e_{\textrm{đỏ}}=f-1$: điều này là bởi vì chúng ta cần bỏ đi một cạnh màu đỏ để làm ngập mỗi vùng khô (chính là các mặt bị chặn) và đồ thị còn lại có (duy nhất) một mặt không bị chặn ngoài các mặt bị chặn đã xét đến. Mặt khác, ta có $e_{\textrm{đen}}=v-1$ bởi vì các cạnh màu đen tạo thành một cây bao trùm của đồ thị ban đầu. Suy ra
+	Nhận thấy rằng $f(1)=f'(1)=0$, do đó tiếp tuyến của hàm số $f(x)$ tại điểm $x=1$ là trục hoành.
+	\vskip 0.1cm 
+	Vì $f(x)$ là hàm lõm và liên tục ($f''(x)>0$) do đó $x=1$ là nghiệm duy nhất của phương trình. 
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Ví dụ $\pmb{7.}$} Giải bất phương trình
 	\begin{align*}
-		e = f-1 + v-1,
+		45x^3\!-\!17x^2\!-\!37x\!+\!25\!\ge\! 4\sqrt{\!\!(x\!+\!1)(5x\!-\!3)^3}.
 	\end{align*}
-	có nghĩa là $v-e+f=2$.
-	\vskip 0.1cm
-	$\pmb{3.}$ \textbf{\color{hoccungpi}Ứng dụng của công thức Euler trong phân loại các khối đa diện đều}
-	\vskip 0.1cm
-	Một khối đa diện (lồi) được gọi là đều nếu các mặt của nó là các đa giác đều bằng nhau và số cạnh đi ra từ mỗi đỉnh của đa diện có là bằng nhau. Việc phân loại các đa diện đều được biết đến từ thời Platon. Ta có kết quả quen thuộc sau đây.
-	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Định lý} $\pmb{3.}$ \textit{Có tất cả $5$ loại khối đa diện đều. Đó là: hình tứ diện đều, hình lập phương, hình bát diện đều, hình mười hai mặt đều, hình hai mươi mặt đều.}
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale=0.07]{Tetrahedron.png} 
-		\includegraphics[scale=0.07]{Hexahedron.png}
-		\includegraphics[scale=0.07]{Octahedron.png}
-		\includegraphics[scale=0.07]{Dodecahedron.png}
-		\includegraphics[scale=0.07]{Icosahedron.png}
-		\vspace*{-10pt}
-	\end{figure}
-	\textit{Chứng minh.} Xét một khối đa diện đều $P$. Giả sử $P$ có $v$ đỉnh và mỗi đỉnh có bậc $k$ (nghĩa là mỗi đỉnh có $k$ cạnh đi ra từ đó) và mỗi mặt là một đa giác đều có $m$ cạnh. Gọi $e, f$ tương ứng là số cạnh và số mặt của $P$. 
-	\vskip 0.1cm
-	$\bullet$ Một mặt, ta có $kv= 2e$: mỗi đỉnh có $k$ cạnh đi ra, do đó có tổng cộng $kv$ cạnh, nhưng mỗi cạnh được đếm $2$ lần.
-	\vskip 0.1cm
-	$\bullet$ Mặt khác, $m f=2e$: mỗi mặt có $m$ cạnh, do đó có $mf $ cạnh, nhưng mỗi cạnh cũng được đếm $2$ lần do mỗi cạnh nằm trên đúng $2$ mặt.
-	\vskip 0.1cm
-	Suy ra $v = \frac{2e}{k}, f = \frac{2e}{m}$. Thay vào công thức Euler cho đa diện: $v-e+f=2$, ta có 
+	\textit{Lời giải.} Bất phương trình đã cho được viết lại thành 
 	\begin{align*}
-		e\left(\frac{2}{k}-1 + \frac{2}{m}\right)=2.
-	\end{align*}	
-	Nói riêng, $\frac{2}{k}-1 + \frac{2}{m} >0$, hay $(k-2)(m-2) < 4$.
-	\vskip 0.1cm	
-	Chú ý rằng $k \geq 3, m \geq 3$ do mỗi đỉnh phải có ít nhất $3$ cạnh đi ra từ đó và mỗi mặt có ít nhất $3$ cạnh. Kết hợp với bất đẳng thức $(k-2)(m-2) < 4$ ta suy ra $3 \leq k, m \leq 5$. Thử lại ta thấy các bộ thỏa mãn các bất đẳng thức trên là 
-	\begin{align*}
-		\boxed{(k, m)\!\in\! \{\!(3,3), (3, 4), (3, 5), (4, 3), (5, 3)\!\}\!.}
+		(x\!+\!1\!)(45x^2\!-\!62x\!+\!25)\!\ge\! 4\sqrt{\!\!(x\!+\!1\!)(5x\!-\!3)^3}.
 	\end{align*}
-	Đảo lại, ứng với các giá trị này ta có các đa diện đều: khối tứ diện đều, khối lập phương, khối bát diện đều, khối mười hai mặt đều và khối hai mươi mặt đều.
+	Nhận thấy rằng một nghiệm là $x=-1$; các nghiệm khác phải thỏa mãn $x>-1$ (trái lại thì VT$<0\le$ VP), và thật ra $x\ge\frac 35$ (trái lại thì VP không xác định).
 	\vskip 0.1cm
-	$\pmb{4.}$ \textbf{\color{hoccungpi}Một số ví dụ ứng dụng khác của công thức Euler}
-	\vskip 0.1cm
-	Ta có bài toán đố nổi tiếng sau đây.
-	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{5.}$ \textit{Trong một thị trấn có $3$ ngôi nhà $A, B, C$ và ba nhà máy điện, nước và khí đốt. Mỗi ngôi nhà cần phải được nối với mỗi nhà máy trên bởi một đường ống. Hỏi có thể xây dựng được các đường ống sao cho hai đường ống đôi một không giao nhau hay không?}
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=1\linewidth]{3_utilities}
-		\vspace*{-10pt}
-	\end{figure}
-	\textit{Lời giải.} Biểu diễn các ngôi nhà và các nhà máy bằng các điểm của mặt phẳng và các đường ống bằng các đường liên tục. Ta thu được một đồ thị gồm $6$ đỉnh ($3$ ngôi nhà và $3$ nhà máy) và $9$ cạnh (nối mỗi ngôi nhà với mỗi nhà máy).  Bài toán yêu cầu chứng minh đồ thị nhận được, được gọi là đồ thị $K_{3, 3}$, không phải là đồ thị phẳng.
-	\begin{figure}[H]
-		\centering
-		\vspace*{-5pt}
-		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[scale=0.15]{K3_3}
-		\vspace*{-10pt}
-	\end{figure}
-	Giả sử ngược lại, đồ thị $K_{3,3}$ là một đồ thị phẳng có $f$ mặt. 
-	\vskip 0.1cm
-	$\bullet$ Theo công thức Euler, ta có
+	Khi đó (với điều kiện $x\ge\frac 35$) bất phương trình trở thành
 	\begin{align*}
-		6 - 9 + f = 2.
+		45x^2-62x+25\ge 4(5x-3)\sqrt{\dfrac{5x-3}{x+1}}.
 	\end{align*}
-	Suy ra $f=5$.
+	Nhận thấy một nghiệm thứ hai là $x=\frac 35$. Vậy với $x>\frac 35$ bất phương trình trở thành
+	\begin{align*}
+		\dfrac{45x^2-62x+25}{4(5x-3)}\ge \sqrt{\dfrac{5x-3}{x+1}}.
+	\end{align*}
+	VT là hàm lõm (bạn đọc tự kiểm tra) với tiếp tuyến $y=x$ tại $x=1$, VP là hàm lồi (bạn đọc tự kiểm tra) với tiếp tuyến $y=x$ tại $x=1$. Vậy đồ thị hàm số VT luôn nằm trên đồ thị của VP,  do đó bất phương trình luôn đúng.
 	\vskip 0.1cm
-	$\bullet$  Mặt khác, dễ thấy không một mặt nào, bị chặn hay không bị chặn, của $K_{3, 3}$ là tam giác (do các cạnh chỉ nối các nhà máy với các ngôi nhà, chứ không nối $2$ nhà máy với nhau cũng như $2$ ngôi nhà với nhau). Từ đó suy ra mỗi mặt của $K_{3,3}$ có ít nhất $4$ cạnh. Mà mỗi cạnh thuộc đúng hai mặt. Chứng tỏ $2$ lần số cạnh $ \geq $ $4$ lần số mặt. Suy ra $f \leq \frac{9}{2}$, mâu thuẫn với việc $f=5$.
+	Vậy nghiệm của bất phương trình là: \linebreak $x\in\{-1\}\cup\left[\frac 35,+\infty\right)$
 	\vskip 0.1cm
-	Bài toán về trò chơi sau đây được lấy từ kỳ thi Putnam, một kỳ thi Toán dành cho sinh viên các trường đại học của Mỹ. 
+	\textbf{\color{hoccungpi}$\pmb{5.}$ Bài tập đề nghị}
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{6.}$
-	\textit{Cho một đa diện với ít nhất $5$ mặt và sao cho mỗi đỉnh có đúng $3$ cạnh xuất phát từ đó. Hai bạn $A$ và $B$ chơi trò chơi sau đây trên đa diện đó: mỗi người lần lượt, bạn $A$ bắt đầu, viết tên mình lên một mặt chưa từng được viết lên. Người chiến thắng là người đầu tiên viết tên mình lên $3$ mặt cùng chung $1$ đỉnh. Hỏi ai là người có chiến lược thắng cuộc?}
+	\textbf{\color{hoccungpi}Bài $\pmb{1.}$} Giải các phương trình sau trên tập số thực
 	\vskip 0.1cm
-	\textit{Lời giải}
-	Trả lời: bạn $A$ có chiến lược thắng!
-	\vskip 0.1cm	
-	Nếu tồn tại một mặt $F_0$ với ít nhất $4$ cạnh thì $A$ viết tên lên mặt đó. Giả sử $F_0$ có các cạnh $e_1, \ldots,e_k (k\geq 4)$. Nếu $B$ viết lên một cạnh kề với $F_0$, có nghĩa là một trong các mặt $F_i$, mặt chung cạnh $e_i$ với $F_0$. Không mất tính tổng quát, gọi đó là mặt $F_1$. Thế thì lượt tiếp theo, $A$ viết lên mặt $F_3$. Khi đó, ở lượt tiếp theo, $B$ không thể ngăn $A$ viết lên một trong $2$ mặt $F_2, F_4$. (Tất nhiên, $A$ giữ chiến lược này cả khi $B$ không chọn một mặt kề với $F_0$.)
+	$a)$  $\sqrt[4]{x}=\frac{3}{8}+2x$.
 	\vskip 0.1cm
-	Giả sử đa diện không có mặt có $\ge 4$ cạnh. Thế thì mỗi mặt là một tam giác. Nhưng một đa diện có mỗi mặt là một tam giác và mỗi đỉnh có bậc $3$ phải là một tứ diện.Thật vậy điều này được suy ra từ các đẳng thức: $v-e+f=2$ (công thức Euler), $2e=3f$ (vì mỗi mặt là một tam giác) và $2e=3v$ (vì mỗi đỉnh có bậc $3$). Nhưng điều này mâu thuẫn với giả thiết rằng đa diện có $\geq 5 $ mặt. 
+	$b)$ $8x^2+\sqrt{\frac{1}{x}}=\frac{5}{2}.$
 	\vskip 0.1cm
-	Công thức Euler có vai trò quan trọng trong một số bài toán thi học sinh giỏi ở bậc phổ thông. Chẳng hạn, bài toán sau đây xuất hiện trong đề thi Olympic Toán học Trung Quốc lần thứ $36$, năm $2020-2021$.
+	$c)$ $16x^4+5=6\sqrt[3]{4x^3+x}.$
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Ví dụ} $\pmb{7.}$ \textit{Cho $P$ là một khối đa diện thỏa mãn: 
+	$d)$ $ 2\sqrt[4]{\dfrac{x^{2}}{3}+4}=1+\sqrt{\dfrac{3x}{2}}.$
 	\vskip 0.1cm
-	$\bullet$ Mỗi đỉnh của $P$ thuộc ba mặt khác nhau;
+	$e)$ $x^2+2x+4=3\sqrt{x^3+4x}.$
 	\vskip 0.1cm
-	$\bullet$ Với mọi số nguyên $ k \geq 3$, số mặt của $P$ có $k$ cạnh là một số chẵn.
+	$f)$ $2^{x^2}+3^{x^2}+4^{x^2}+5^{x^2}=4^{1-x^2}.$
 	\vskip 0.1cm
-	$\bullet$ Một con kiến bò dọc theo các cạnh của $P$, bắt đầu từ trung điểm của một cạnh, bò theo một hành trình khép kín $L$, đi qua mỗi điểm trên $L$ đúng một lần, và cuối cùng quay trở lại điểm xuất phát. Hành trình $L$ chia bề mặt của đa diện $P$ thành $2$ phần, sao cho với mọi $k \leq 3$, số đa giác $k$ cạnh trong hai phần đó là bằng nhau. Chứng minh số lần rẽ trái và rẽ phải của con kiến là bằng nhau.}
+	$g)$ $x^2+x = (6x-x^2-2)\sqrt{x-1}.$
 	\vskip 0.1cm
-	Bạn đọc hãy tự thử sức mình với bài toán trên. Lời giải của bài toán có thể được tìm thấy trong Tạp chí Pi, số $3$ năm $2022$.
+	$h)$ $2x^2-11x+21-3\sqrt[3]{4x-4}=0.$
 	\vskip 0.1cm
-	\textbf{\color{hoccungpi}Tài liệu}
+	$i)$ $x^{3}+x^{2}-15x+30=4\sqrt[4]{27(x+1)}.$
 	\vskip 0.1cm
-	[$1$] Nguyễn Hữu Việt Hưng. \emph{Rộng hẹp nhỏ to đều vậy cả (hay Tôpô học là gì?)} Tạp chí Pi, tập $2$, số $7$ năm $2018$.
+	$j)$ $2\sqrt[4]{27x^2+24x+\frac{28}{3}}=1+\sqrt{\frac{27x}{2}+6}.$
 	\vskip 0.1cm
-	[$2$] Joseph Malkevitch. \emph{Euler's polyhedral formula}. Notices of the American Mathematical Society, số $12$ năm $2004$.
-\end{multicols}
+	$k)$ $\sqrt{x^2+x-1}+\sqrt{x-x^2+1}=x^2-x+2.$
+	\vskip 0.1cm
+	$l)$ $x^2-2x+3=\sqrt{2x^2-x}+\sqrt{1+3x-3x^2}.$
+	\vskip 0.1cm
+	$m)$ $\sqrt{x^2+x+19}+\sqrt{7x^2+22x+28}$\\
+	$\quad\,\,+\sqrt{13x^2+43x+37}=3\sqrt{3}(x+3)$.
+	\vskip 0.1cm
+	$n)$ $\log_2 \dfrac{2x+1}{4x} = \log_{x} \dfrac{2x+1}{2}.$\\
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Bài $\pmb{2.}$} Tồn tại hay không các cặp số thực âm $(x,y)$ thoả mãn phương trình \linebreak$x2^y+y2^{-x}=x+y$?
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Bài $\pmb{3.}$} Tìm tất cả các số thực $a$ sao cho bất phương trình $a^x\geq 1+x\log _{11}12$ đúng với mọi số thực $x$.
+	\vskip 0.1cm
+	\textbf{\color{hoccungpi}Tài liệu tham khảo}
+	\vskip 0.1cm
+	[$1$] Ngô Thúc Lanh (chủ biên), {\it Giải tích $12$ }(SGK), Nhà xuất bản Giáo Dục ($2006$).
+	\vskip 0.1cm
+	[$2$] Nguyễn Huy Đoan (chủ biên), {\it Giải tích $12$ nâng cao} (SGK), Nhà xuất bản Giáo Dục ($2008$).
+	\vskip 0.1cm
+	[$3$] Phan Đức Chính (chủ biên), {\it Một số phương pháp chọn lọc giải các bài toán sơ cấp (Tập $2$)}, Nhà xuất bản Đại học Quốc gia Hà Nội ($2003$). 
+	\vskip 0.1cm
+	[$4$] Nguyễn Quang Nam, {\it Kỹ thuật tạo nhân tử kép}, Tạp chí Toán học và Tuổi trẻ, Nhà xuất bản Giáo Dục (Số $511$, tháng $1/2020)$.
+	\vskip 0.1cm
+	[$5$]~\url{https://artofproblemsolving.com/com} \url{munity}
+	\end{multicols}
